@@ -46,14 +46,14 @@ const ProfileAndVerification = () => {
 
 
 
-<View style={{width: wp("100%"),flexDirection:"column",display:"flex",justifyContent:"center",alignItems:"center",position:"relative",paddingTop:35}}>
+<View style={{width: wp("100%"),flexDirection:"column",display:"flex",justifyContent:"center",alignItems:"center",position:"relative",paddingTop:20}}>
           <View style={{width: wp("90%"),flexDirection:"column",display:"flex",justifyContent:"center",backgroundColor:"#fff",padding:15,gap:15}}>
             <View>
                 <Text style={{fontWeight:"bold",fontSize: hp(2.4)}}>Profile & Verification</Text>
             </View>
             <View style={{flexDirection:"column",gap:10}}>
                <View>
-               <Text style={{fontWeight:"bold"}}>Managing my profile:</Text>
+               <Text style={{fontWeight:"bold",fontSize:hp(2.4)}}>Managing my profile:</Text>
                </View>
                <Pressable onPress={()=>navigation.navigate('ChangeMobileNumber')}>
                <Text style={{color:"#6F6F6F"}}>How to change my mobile number?</Text>
