@@ -103,26 +103,26 @@ const PanReject = () => {
           <View style={{flexDirection:"row",width:"90%",display:"flex",justifyContent:"flex-start",alignItems:"center"}}>
                 <Text style={{fontWeight:"bold"}}>Can't find what you are looking for</Text>
           </View>
-          <View style={{flexDirection:"row",width:"90%",display:"flex",justifyContent:"flex-start",alignItems:"center"}}>
+          <View style={{flexDirection:"row",width: wp("90%"),display:"flex",justifyContent:"flex-start",alignItems:"center",paddingBottom:10}}>
           <LinearGradient
           style={{
             flex: 1,borderRadius:10
           }}
           colors={["#101632", "#2A3A83", "#374DAD"]}
         >
-           <View style={{width:"100%",flexDirection:"row",display:"flex",justifyContent:"center",alignItems:"center"}}>
+           <View style={{width: wp("90%"),flexDirection:"row",display:"flex",justifyContent:"center",alignItems:"center"}}>
 
-            <View style={{width:"100%",flexDirection:"row",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+            <View style={{width:wp("90%"),flexDirection:"row",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
             <View style={{flexDirection:"column",gap:10,alignItems:"center",paddingLeft:20}}>
-                <Text style={{fontWeight:"bold",color:"#fff",fontSize:20,}}>We are here to help!</Text>
-                <Pressable style={{borderRadius:5,borderColor:"#fff",borderWidth:1,alignItems:"center",flexDirection:"row",justifyContent:"space-around",width:100,padding:5}}>
-                     <Image source={require('../../../../assets/WriteToUsLogo.png')} style={{height:20,width:20}}/>
-                     <Text style={{fontWeight:"bold",color:"#fff",fontSize:15}}>Write to us</Text>
+                <Text style={{fontWeight:"bold",color:"#fff",fontSize:hp(2.8),}}>We are here to help!</Text>
+                <Pressable style={{borderRadius:5,borderColor:"#fff",borderWidth:1,alignItems:"center",flexDirection:"row",justifyContent:"space-around",width:wp(28),padding:5}}>
+                     <Image source={require('../../../../assets/WriteToUsLogo.png')} style={{height:hp(3),width:wp(5)}}/>
+                     <Text style={{fontWeight:"bold",color:"#fff",fontSize:hp(2)}}>Write to us</Text>
                 </Pressable>
             </View>
 
             <View>
-            <Image source={require('../../../../assets/WriteToUs.png')} style={{width:150,height:150}}/>
+            <Image source={require('../../../../assets/WriteToUs.png')} style={{width: wp(30),height: hp(20)}}/>
             </View> 
             </View> 
 
