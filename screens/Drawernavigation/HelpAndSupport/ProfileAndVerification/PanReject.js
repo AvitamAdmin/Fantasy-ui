@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { LinearGradient } from 'expo-linear-gradient';
 import { AntDesign,Entypo} from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const PanReject = () => {
     const navigation = useNavigation();
@@ -26,8 +27,8 @@ const PanReject = () => {
         )
     }
   return (
-    <View style={{height:"100%",width:"100%"}}>
-    <View style={{height:"15%",width:"100%",position:"relative"}}>
+    <View style={{height: hp("100%"),width: wp("100%")}}>
+    <View style={{height: hp("18%"),width: wp("100%"),position:"relative"}}>
   <LinearGradient
   style={{
     flex: 1,
@@ -35,19 +36,19 @@ const PanReject = () => {
   colors={["#101632", "#2A3A83", "#374DAD"]}
 >
    <View style={{flexDirection:"column",display:"flex",justifyContent:"center",width:"100%",alignItems:"center",paddingTop:40,gap:20}}>
-   <View style={{width:"90%",flexDirection:"row",justifyContent:"space-between",display:"flex"}}>
+   <View style={{width: wp("90%"),flexDirection:"row",justifyContent:"space-between",display:"flex"}}>
       <Pressable onPress={()=>navigation.goBack()}>
       <AntDesign name="arrowleft" size={24} color="#fff" />
       </Pressable>
       <View>
-        <Text style={{color:"#fff",fontWeight:"bold",fontSize:15}}>Help & Support</Text>
+        <Text style={{color:"#fff",fontWeight:"bold",fontSize: hp(2.4)}}>Help & Support</Text>
       </View>
       <View>
         
       </View>
   </View>
 
-  <View  style={{width:"90%",flexDirection:"row",justifyContent:"space-between",display:"flex"}}>
+  <View  style={{width: wp("90%"),flexDirection:"row",justifyContent:"space-between",display:"flex"}}>
         <View style={{flexDirection:"row",gap:5,alignItems:"center"}}>
             <Image source={require('../../../../assets/IMPACT11 Logo extended.png')}style={{height:15,width:80}}/>
             <Text style={{fontWeight:"bold",color:"#fff",fontSize:28}}>|</Text>
@@ -61,15 +62,15 @@ const PanReject = () => {
 
 
 
-<View style={{width:"100%",flexDirection:"column",display:"flex",justifyContent:"center",alignItems:"center",position:"relative",paddingTop:20,gap:15}}>
-          <View style={{width:"90%",flexDirection:"column",display:"flex",justifyContent:"center",backgroundColor:"#fff",padding:15,gap:15}}>
+<View style={{width: wp("100%"),flexDirection:"column",display:"flex",justifyContent:"center",alignItems:"center",position:"relative",paddingTop:20,gap:15}}>
+          <View style={{width: wp("90%"),flexDirection:"column",display:"flex",justifyContent:"center",backgroundColor:"#fff",padding:15,gap:15}}>
             <View style={{flexDirection:"row",gap:5}}>
-                <Text style={{fontWeight:"bold",fontSize:17}}>Profile & Verification</Text>
+                <Text style={{fontWeight:"bold",fontSize: hp(2.8)}}>Profile & Verification</Text>
                 <Text style={{color:"#6F6F6F"}}>/ Verify my account</Text>
             </View>
             <View style={{flexDirection:"column",gap:40}}>
                  <View style={{flexDirection:"column",gap:15}}>
-                    <Text style={{fontWeight:"bold",fontSize:17}}>Why is my PAN verification getting
+                    <Text style={{fontWeight:"bold",fontSize: hp(2.4)}}>Why is my PAN verification getting
                     rejected?</Text>
                     <Text>As per the Google Play store policy to ensure compliance with state Gaming law,  you need to verify any one the Aadhar card, Voter ID, or Diving license.</Text>
                  </View>
