@@ -146,6 +146,8 @@ import MatchDeadline from "./screens/Drawernavigation/HelpAndSupport/FairPlay/Ma
 import DetailsSafe from "./screens/Drawernavigation/HelpAndSupport/FairPlay/DetailsSafe";
 import LosingGame from "./screens/Drawernavigation/HelpAndSupport/FairPlay/LosingGame";
 import LegalityScreen from "./screens/Drawernavigation/HelpAndSupport/Legality/LegalityScreen";
+import HelpAndSupport from "./screens/Drawernavigation/HelpAndSuport";
+import FantacyPointsSystems from "./screens/Drawernavigation/Points/FantasyPointsSystems";
 
 const getHeaderRight = (navigation) => (
   <View
@@ -1165,6 +1167,14 @@ function DrawerScreen() {
           headerShown: true,
         }}
       />
+       <Drawer.Screen
+        name="Fantasy Point System"
+        component={FantacyPointsSystems}
+        options={{
+          headerShown: false,
+        }}
+      />
+
       <Drawer.Screen
         options={{
           headerShown: false,
@@ -1173,8 +1183,8 @@ function DrawerScreen() {
         component={HowToPlay}
       />
       <Drawer.Screen
-        name="Help & Suport"
-        component={HelpAndSuport}
+        name="Help & Support"
+        component={HelpAndSupport}
         options={{
           headerShown: false,
         }}
