@@ -10,6 +10,7 @@ import {
   import { LinearGradient } from "expo-linear-gradient";
   import { Entypo ,AntDesign} from '@expo/vector-icons';
   import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import ODScreen from "./OD";
 
   const Cricket = () => {
     const [Drop, setDrop] = useState(false);
@@ -20,6 +21,7 @@ import {
     const [T20, setT20] = useState(true)
     const [OD, setOD] = useState(false)
     const [Test, setTest] = useState(false)
+    const [T10, setT10] = useState(false)
     const [Hundred, setHundred] = useState(false)
     const [Sixty, setSixty] = useState(false)
 
@@ -29,8 +31,10 @@ import {
         {setT20(!T20)}
         {setOD(false)}
         {setTest(false)}
+        {setT10(false)}
         {setHundred(false)}
         {setSixty(false)}
+        
         </>
       )
     }
@@ -40,6 +44,7 @@ import {
         {setOD(!OD)}
         {setT20(false)}
         {setTest(false)}
+        {setT10(false)}
         {setHundred(false)}
         {setSixty(false)}
         </>
@@ -50,7 +55,20 @@ import {
         <>
         {setTest(!Test)}
         {setT20(false)}
-        {setOD(false)}       
+        {setOD(false)} 
+        {setT10(false)}      
+        {setHundred(false)}
+        {setSixty(false)}
+        </>
+      )
+    }
+    const handleT10 = () =>{
+      return(
+        <>
+        {setT10(!T10)} 
+        {setTest(false)}
+        {setT20(false)}
+        {setOD(false)}      
         {setHundred(false)}
         {setSixty(false)}
         </>
@@ -63,6 +81,7 @@ import {
         {setT20(false)}
         {setOD(false)}       
         {setTest(false)}
+        {setT10(false)}
         {setSixty(false)}
         </>
       )
@@ -74,6 +93,7 @@ import {
         {setT20(false)}
         {setOD(false)}       
         {setTest(false)}
+        {setT10(false)}
         {setHundred(false)} 
         </>
       )
@@ -107,6 +127,10 @@ import {
                    <Pressable onPress={()=>handleTest()}
                    style={{borderRadius:3,borderWidth:1,width:wp("10%"),flexDirection:"row",display:"flex",justifyContent:"center",alignItems:"center",height:25,borderColor:"#cccc"}}>
                    <Text>Test</Text>
+                   </Pressable>
+                   <Pressable onPress={()=>handleT10()}
+                   style={{borderRadius:3,borderWidth:1,width:wp("10%"),flexDirection:"row",display:"flex",justifyContent:"center",alignItems:"center",height:25,borderColor:"#cccc"}}>
+                   <Text>T10</Text>
                    </Pressable>
                    <Pressable onPress={()=>handleHundred()}
                    style={{borderRadius:3,borderWidth:1,width:wp("30%"),flexDirection:"row",display:"flex",justifyContent:"center",alignItems:"center",height:25,borderColor:"#cccc"}}>
@@ -912,7 +936,7 @@ import {
       
       <View
       style={{
-        width: "100%",
+        width: wp("92%"),
         flexDirection: "column",
         display: "flex",
         justifyContent: "center",
@@ -925,7 +949,7 @@ import {
           setBowling(!bowling);
         }}
         style={{
-          width: "100%",
+          width: wp("92%"),
             flexDirection: "column",
             display: "flex",
             justifyContent: "center",
@@ -937,7 +961,7 @@ import {
       >
         <View
           style={{
-            width: "100%",
+            width: wp("92%"),
             flexDirection: "row",
             display: "flex",
             justifyContent: "space-between",
@@ -965,7 +989,7 @@ import {
         {bowling && (
           <View
             style={{
-              width: "100%",
+              width: wp("91%"),
               flexDirection: "column",
               display: "flex",
               alignItems: "center",
@@ -978,7 +1002,7 @@ import {
             
             justifyContent: "center", 
             alignItems: "center",
-           width:"100%",
+           width: wp("91%"),
            display:"flex",
            flexDirection: 'column',
            padding:5
@@ -989,19 +1013,19 @@ import {
         >
         <View
               style={{
-                width: "95%",
+                width: wp("85%"),
                 flexDirection: "row",
                
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <View style={{ width: "50%" }}>
+              <View style={{ width: wp("50%")}}>
                 <Text style={{ fontWeight: "bold" }}>Wickets<Text>(Excluding Run Out)</Text></Text>
               </View>
               <View
                 style={{
-                  width: "50%",
+                  width: wp("35%"),
                   flexDirection: "row",
                   display: "flex",
                   justifyContent: "flex-end",
@@ -1021,7 +1045,7 @@ import {
           
           justifyContent: "center", 
           alignItems: "center",
-         width:"100%",
+         width: wp("91%"),
          display:"flex",
          flexDirection: 'column',
          padding:5
@@ -1032,19 +1056,19 @@ import {
       >
       <View
             style={{
-              width: "95%",
+              width: wp("85%"),
               flexDirection: "row",
              
               display: "flex",
               alignItems: "center",
             }}
           >
-            <View style={{ width: "50%" }}>
+            <View style={{ width: wp("50%") }}>
               <Text style={{ fontWeight: "bold" }}>Bonus <Text>(LBW/Bowled)</Text></Text>
             </View>
             <View
               style={{
-                width: "50%",
+                width: wp("35%"),
                 flexDirection: "row",
                 display: "flex",
                 justifyContent: "flex-end",
@@ -1064,7 +1088,7 @@ import {
             
             justifyContent: "center", 
             alignItems: "center",
-           width:"100%",
+           width: wp("91%"),
            display:"flex",
            flexDirection: 'column',
            padding:5
@@ -1075,19 +1099,19 @@ import {
         >
         <View
               style={{
-                width: "95%",
+                width: wp("85%"),
                 flexDirection: "row",
                
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <View style={{ width: "50%" }}>
+              <View style={{ width: wp("50%") }}>
                 <Text style={{ fontWeight: "bold" }}>3 Wicket Bonus</Text>
               </View>
               <View
                 style={{
-                  width: "50%",
+                  width: wp("35%"),
                   flexDirection: "row",
                   display: "flex",
                   justifyContent: "flex-end",
@@ -1107,7 +1131,7 @@ import {
             
             justifyContent: "center", 
             alignItems: "center",
-           width:"100%",
+           width:wp("91%"),
            display:"flex",
            flexDirection: 'column',
            padding:5
@@ -1118,19 +1142,19 @@ import {
         >
         <View
               style={{
-                width: "95%",
+                width: wp("85%"),
                 flexDirection: "row",
                
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <View style={{ width: "50%" }}>
+              <View style={{ width: wp("50%") }}>
                 <Text style={{ fontWeight: "bold" }}>4 Wicket Bonus</Text>
               </View>
               <View
                 style={{
-                  width: "50%",
+                  width: wp("35%"),
                   flexDirection: "row",
                   display: "flex",
                   justifyContent: "flex-end",
@@ -1150,7 +1174,7 @@ import {
             
             justifyContent: "center", 
             alignItems: "center",
-           width:"100%",
+           width:wp("91%"),
            display:"flex",
            flexDirection: 'column',
            padding:5
@@ -1161,19 +1185,19 @@ import {
         >
         <View
               style={{
-                width: "95%",
+                width: wp("85%"),
                 flexDirection: "row",
                
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <View style={{ width: "50%" }}>
+              <View style={{ width: wp("50%") }}>
                 <Text style={{ fontWeight: "bold" }}>5 Wicket Bonus</Text>
               </View>
               <View
                 style={{
-                  width: "50%",
+                  width: wp("35%"),
                   flexDirection: "row",
                   display: "flex",
                   justifyContent: "flex-end",
@@ -1193,7 +1217,7 @@ import {
           
           justifyContent: "center", 
           alignItems: "center",
-         width:"100%",
+         width:wp("91%"),
          display:"flex",
          flexDirection: 'column',
          padding:5
@@ -1204,19 +1228,19 @@ import {
       >
       <View
             style={{
-              width: "95%",
+              width: wp("85%"),
               flexDirection: "row",
              
               display: "flex",
               alignItems: "center",
             }}
           >
-            <View style={{ width: "50%" }}>
+            <View style={{ width: wp("50%") }}>
               <Text style={{ fontWeight: "bold" }}>Maiden Over</Text>
             </View>
             <View
               style={{
-                width: "50%",
+                width: wp("35%"),
                 flexDirection: "row",
                 display: "flex",
                 justifyContent: "flex-end",
@@ -1236,7 +1260,7 @@ import {
         
         justifyContent: "center", 
         alignItems: "center",
-       width:"100%",
+       width:wp("91%"),
        display:"flex",
        flexDirection: 'column',
        padding:5
@@ -1247,20 +1271,20 @@ import {
     >
     <View
           style={{
-            width: "95%",
+            width: wp("85%"),
             flexDirection: "row",
            
             display: "flex",
             alignItems: "center",
           }}
         >
-          <View style={{ width: "50%" }}>
+          <View style={{ width: wp("50%") }}>
             <Text style={{ fontWeight: "bold" }}>Economy Rate Points</Text>
             <Text style={{fontSize:10}}>(Minimum 2 Overs to be Bowled)</Text>
           </View>
           <View
             style={{
-              width: "50%",
+              width: wp("35%"),
               flexDirection: "row",
               display: "flex",
               justifyContent: "flex-end",
@@ -1282,7 +1306,7 @@ import {
         
         justifyContent: "center", 
         alignItems: "center",
-       width:"100%",
+       width:wp("91%"),
        display:"flex",
        flexDirection: 'column',
        padding:5
@@ -1293,19 +1317,19 @@ import {
     >
     <View
           style={{
-            width: "95%",
+            width: wp("85%"),
             flexDirection: "row",
            
             display: "flex",
             alignItems: "center",
           }}
         >
-          <View style={{ width: "50%" }}>
+          <View style={{ width: wp("50%") }}>
             <Text style={{ fontWeight: "bold" }}>Below 5 Runs per over</Text>
           </View>
           <View
             style={{
-              width: "50%",
+              width: wp("35%"),
               flexDirection: "row",
               display: "flex",
               justifyContent: "flex-end",
@@ -1325,7 +1349,7 @@ import {
         
         justifyContent: "center", 
         alignItems: "center",
-       width:"100%",
+       width:wp("91%"),
        display:"flex",
        flexDirection: 'column',
        padding:5
@@ -1336,19 +1360,19 @@ import {
     >
     <View
           style={{
-            width: "95%",
+            width: wp("85%"),
             flexDirection: "row",
            
             display: "flex",
             alignItems: "center",
           }}
         >
-          <View style={{ width: "50%" }}>
+          <View style={{ width: wp("50%") }}>
             <Text style={{ fontWeight: "bold" }}>Between 5 - 5.99 per over</Text>
           </View>
           <View
             style={{
-              width: "50%",
+              width: wp("35%"),
               flexDirection: "row",
               display: "flex",
               justifyContent: "flex-end",
@@ -1368,7 +1392,7 @@ import {
         
         justifyContent: "center", 
         alignItems: "center",
-       width:"100%",
+       width:wp("91%"),
        display:"flex",
        flexDirection: 'column',
        padding:5
@@ -1379,19 +1403,19 @@ import {
     >
     <View
           style={{
-            width: "95%",
+            width: wp("85%"),
             flexDirection: "row",
            
             display: "flex",
             alignItems: "center",
           }}
         >
-          <View style={{ width: "50%" }}>
+          <View style={{ width: wp("50%") }}>
             <Text style={{ fontWeight: "bold" }}>Between 6 - 7 per overs</Text>
           </View>
           <View
             style={{
-              width: "50%",
+              width: wp("35%"),
               flexDirection: "row",
               display: "flex",
               justifyContent: "flex-end",
@@ -1411,7 +1435,7 @@ import {
         
         justifyContent: "center", 
         alignItems: "center",
-       width:"100%",
+       width:wp("91%"),
        display:"flex",
        flexDirection: 'column',
        padding:5
@@ -1422,19 +1446,19 @@ import {
     >
     <View
           style={{
-            width: "95%",
+            width: wp("85%"),
             flexDirection: "row",
            
             display: "flex",
             alignItems: "center",
           }}
         >
-          <View style={{ width: "50%" }}>
+          <View style={{ width: wp("50%") }}>
             <Text style={{ fontWeight: "bold" }}>Between 10 - 11 per over</Text>
           </View>
           <View
             style={{
-              width: "50%",
+              width: wp("35%"),
               flexDirection: "row",
               display: "flex",
               justifyContent: "flex-end",
@@ -1454,7 +1478,7 @@ import {
       
       justifyContent: "center", 
       alignItems: "center",
-     width:"100%",
+     width:wp("91%"),
      display:"flex",
      flexDirection: 'column',
      padding:5
@@ -1465,19 +1489,19 @@ import {
   >
   <View
         style={{
-          width: "95%",
+          width: wp("85%"),
           flexDirection: "row",
          
           display: "flex",
           alignItems: "center",
         }}
       >
-        <View style={{ width: "50%" }}>
+        <View style={{ width: wp("50%") }}>
           <Text style={{ fontWeight: "bold" }}>Between 11.01 - 12 run per over</Text>
         </View>
         <View
           style={{
-            width: "50%",
+            width: wp("35%"),
             flexDirection: "row",
             display: "flex",
             justifyContent: "flex-end",
@@ -1497,7 +1521,7 @@ import {
     
     justifyContent: "center", 
     alignItems: "center",
-   width:"100%",
+   width:wp("91%"),
    display:"flex",
    flexDirection: 'column',
    padding:5
@@ -1508,19 +1532,19 @@ import {
   >
   <View
       style={{
-        width: "95%",
+        width: wp("85%"),
         flexDirection: "row",
        
         display: "flex",
         alignItems: "center",
       }}
     >
-      <View style={{ width: "50%" }}>
+      <View style={{ width: wp("50%") }}>
         <Text style={{ fontWeight: "bold" }}>Above 12 runs per over</Text>
       </View>
       <View
         style={{
-          width: "50%",
+          width: wp("35%"),
           flexDirection: "row",
           display: "flex",
           justifyContent: "flex-end",
@@ -1543,7 +1567,7 @@ import {
   
     <View
     style={{
-      width: "100%",
+      width: wp("92%"),
       flexDirection: "column",
       display: "flex",
       justifyContent: "center",
@@ -1556,7 +1580,7 @@ import {
           setFielding(!fielding);
         }}
         style={{
-          width: "100%",
+          width: wp("92%"),
           flexDirection: "column",
           display: "flex",
           justifyContent: "center",
@@ -1567,7 +1591,7 @@ import {
       >
         <View
           style={{
-           width: "100%",
+           width: wp("92%"),
             flexDirection: "row",
             display: "flex",
             justifyContent: "space-between",
@@ -1594,7 +1618,7 @@ import {
         {fielding && (
           <View
             style={{
-              width: "100%",
+              width: wp("91%"),
               flexDirection: "column",
               display: "flex",
               alignItems: "center",
@@ -1607,7 +1631,7 @@ import {
             
             justifyContent: "center", 
             alignItems: "center",
-           width:"100%",
+           width:wp("91%"),
            display:"flex",
            flexDirection: 'column',
            padding:5
@@ -1618,19 +1642,19 @@ import {
         >
         <View
               style={{
-                width: "95%",
+                width: wp("85%"),
                 flexDirection: "row",
                
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <View style={{ width: "50%" }}>
+              <View style={{ width: wp("50%") }}>
                 <Text style={{ fontWeight: "bold" }}>Catch</Text>
               </View>
               <View
                 style={{
-                  width: "50%",
+                  width: wp("35%"),
                   flexDirection: "row",
                   display: "flex",
                   justifyContent: "flex-end",
@@ -1650,7 +1674,7 @@ import {
           
           justifyContent: "center", 
           alignItems: "center",
-         width:"100%",
+         width:wp("91%"),
          display:"flex",
          flexDirection: 'column',
          padding:5
@@ -1661,19 +1685,19 @@ import {
       >
       <View
             style={{
-              width: "95%",
+              width: wp("85%"),
               flexDirection: "row",
              
               display: "flex",
               alignItems: "center",
             }}
           >
-            <View style={{ width: "50%" }}>
+            <View style={{ width: wp("50%") }}>
               <Text style={{ fontWeight: "bold" }}>3 Catch Bonus </Text>
             </View>
             <View
               style={{
-                width: "50%",
+                width: wp("35%"),
                 flexDirection: "row",
                 display: "flex",
                 justifyContent: "flex-end",
@@ -1693,7 +1717,7 @@ import {
             
             justifyContent: "center", 
             alignItems: "center",
-           width:"100%",
+           width:wp("91%"),
            display:"flex",
            flexDirection: 'column',
            padding:5
@@ -1704,19 +1728,19 @@ import {
         >
         <View
               style={{
-                width: "95%",
+                width: wp("85%"),
                 flexDirection: "row",
                
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <View style={{ width: "50%" }}>
+              <View style={{ width: wp("50%") }}>
                 <Text style={{ fontWeight: "bold" }}>Stumping</Text>
               </View>
               <View
                 style={{
-                  width: "50%",
+                  width: wp("35%"),
                   flexDirection: "row",
                   display: "flex",
                   justifyContent: "flex-end",
@@ -1736,7 +1760,7 @@ import {
             
             justifyContent: "center", 
             alignItems: "center",
-           width:"100%",
+           width:wp("91%"),
            display:"flex",
            flexDirection: 'column',
            padding:5
@@ -1747,19 +1771,19 @@ import {
         >
         <View
               style={{
-                width: "95%",
+                width: wp("85%"),
                 flexDirection: "row",
                
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <View style={{ width: "50%" }}>
+              <View style={{ width: wp("50%") }}>
                 <Text style={{ fontWeight: "bold" }}>Run out (Direct hit)</Text>
               </View>
               <View
                 style={{
-                  width: "50%",
+                  width: wp("35%"),
                   flexDirection: "row",
                   display: "flex",
                   justifyContent: "flex-end",
@@ -1779,7 +1803,7 @@ import {
             
             justifyContent: "center", 
             alignItems: "center",
-           width:"100%",
+           width:wp("91%"),
            display:"flex",
            flexDirection: 'column',
            padding:5
@@ -1790,19 +1814,19 @@ import {
         >
         <View
               style={{
-                width: "95%",
+                width: wp("85%"),
                 flexDirection: "row",
                
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <View style={{ width: "50%" }}>
+              <View style={{ width: wp("50%") }}>
                 <Text style={{ fontWeight: "bold" }}>Run out (Not a direct hit)</Text>
               </View>
               <View
                 style={{
-                  width: "50%",
+                  width: wp("35%"),
                   flexDirection: "row",
                   display: "flex",
                   justifyContent: "flex-end",
@@ -1828,7 +1852,7 @@ import {
   
     <View
       style={{
-        width: "100%",
+        width: wp("92%"),
         flexDirection: "column",
         display: "flex",
         justifyContent: "center",
@@ -1840,7 +1864,7 @@ import {
           setPoints(!points);
         }}
         style={{
-          width: "100%",
+          width: wp("92%"),
           flexDirection: "column",
           display: "flex",
           justifyContent: "center",
@@ -1851,7 +1875,7 @@ import {
       >
         <View
           style={{
-            width: "100%",
+            width: wp("92%"),
             flexDirection: "row",
             display: "flex",
             justifyContent: "space-between",
@@ -1878,7 +1902,7 @@ import {
         {points && (
           <View
             style={{
-              width: "100%",
+              width: wp("91%"),
               flexDirection: "column",
               display: "flex",
               alignItems: "center",
@@ -1891,7 +1915,7 @@ import {
             
             justifyContent: "center", 
             alignItems: "center",
-           width:"100%",
+           width:wp("91%"),
            display:"flex",
            flexDirection: 'column',
            padding:5
@@ -1902,19 +1926,19 @@ import {
         >
         <View
               style={{
-                width: "95%",
+                width: wp("85%"),
                 flexDirection: "row",
                
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <View style={{ width: "50%" }}>
+              <View style={{ width: wp("50%") }}>
                 <Text style={{ fontWeight: "bold" }}>Captain Points</Text>
               </View>
               <View
                 style={{
-                  width: "50%",
+                  width: wp("35%"),
                   flexDirection: "row",
                   display: "flex",
                   justifyContent: "flex-end",
@@ -1933,7 +1957,7 @@ import {
           
           justifyContent: "center", 
           alignItems: "center",
-         width:"100%",
+         width:wp("91%"),
          display:"flex",
          flexDirection: 'column',
          padding:5
@@ -1944,19 +1968,19 @@ import {
       >
       <View
             style={{
-              width: "95%",
+              width: wp("85%"),
               flexDirection: "row",
              
               display: "flex",
               alignItems: "center",
             }}
           >
-            <View style={{ width: "50%" }}>
+            <View style={{ width: wp("50%") }}>
               <Text style={{ fontWeight: "bold" }}>Vice Captain Points </Text>
             </View>
             <View
               style={{
-                width: "50%",
+                width: wp("35%"),
                 flexDirection: "row",
                 display: "flex",
                 justifyContent: "flex-end",
@@ -1973,7 +1997,7 @@ import {
             
             justifyContent: "center", 
             alignItems: "center",
-           width:"100%",
+           width:wp("91%"),
            display:"flex",
            flexDirection: 'column',
            padding:5
@@ -1984,19 +2008,19 @@ import {
         >
         <View
               style={{
-                width: "95%",
+                width: wp("85%"),
                 flexDirection: "row",
                
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <View style={{ width: "50%" }}>
+              <View style={{ width: wp("50%") }}>
                 <Text style={{ fontWeight: "bold" }}>In Announced LineUp</Text>
               </View>
               <View
                 style={{
-                  width: "50%",
+                  width: wp("35%"),
                   flexDirection: "row",
                   display: "flex",
                   justifyContent: "flex-end",
@@ -2010,10 +2034,10 @@ import {
            
         <LinearGradient
           style={{
-            
+            paddingBottom:20,
             justifyContent: "center", 
             alignItems: "center",
-           width:"100%",
+           width:wp("91%"),
            display:"flex",
            flexDirection: 'column',
            padding:5
@@ -2024,23 +2048,24 @@ import {
         >
         <View
               style={{
-                width: "95%",
+                width: wp("85%"),
                 flexDirection: "row",
-               
+              
                 display: "flex",
                 alignItems: "center",
               }}
             >
-              <View style={{ width: "50%" }}>
+              <View style={{ width: wp("50%") }}>
                 <Text style={{ fontWeight: "bold" }}>Playing Substitute</Text>
               </View>
               <View
                 style={{
-                  width: "50%",
+                  width: wp("35%"),
                   flexDirection: "row",
                   display: "flex",
                   justifyContent: "flex-end",
                   gap: 5,
+
                 }}
               >
                 <Text style={{ fontWeight: "bold", color: "#00A000" }}>+4 Pts</Text>
@@ -2056,10 +2081,13 @@ import {
                     </>
                   }
                   {
-                    OD && <Text>OD</Text>
+                    OD && <Text> <ODScreen/> </Text>
                   }
                   {
                     Test && <Text>Test</Text>
+                  }
+                  {
+                    T10 && <Text>T10</Text>
                   }
                   {
                     Hundred && <Text>Hundred</Text>
@@ -2084,7 +2112,7 @@ import {
       color: "#000",
     },
     FilterContainer: {
-      width: "100%",
+      width: wp("100%"),
       borderRadius: 4,
       alignItems: "center",
       borderWidth:1,
