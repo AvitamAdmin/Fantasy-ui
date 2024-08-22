@@ -11,7 +11,7 @@ import {
   import { Entypo ,AntDesign} from '@expo/vector-icons';
   import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-export default function ODScreen(){
+export default function SixtyScreen(){
     const [Drop, setDrop] = useState(false);
     const [bowling, setBowling] = useState(false)
     const [fielding, setFielding] = useState(false)

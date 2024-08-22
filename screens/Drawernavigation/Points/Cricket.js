@@ -11,6 +11,10 @@ import {
   import { Entypo ,AntDesign} from '@expo/vector-icons';
   import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import ODScreen from "./OD";
+import TestScreen from "./Test";
+import T10Screen from "./T10";
+import HundredScreen from "./Hundred";
+import SixtyScreen from "./Sixty";
 
   const Cricket = () => {
     const [Drop, setDrop] = useState(false);
@@ -106,7 +110,6 @@ import ODScreen from "./OD";
           display: "flex",
           flexDirection: "column",
           width:  wp("100%"),
-          // justifyContent: "center",
           alignItems: "center",
           flex:1,
           gap:10 
@@ -115,31 +118,47 @@ import ODScreen from "./OD";
      
         <View style={{flexDirection:"row",width: wp("100%"),padding:10,display:"flex",justifyContent:"space-between",alignItems:"center"}}>
                      
-                   <Pressable onPress={()=>handleT20()}
-                   style={{borderRadius:3,borderWidth:1,width: wp("10%"),flexDirection:"row",display:"flex",justifyContent:"center",alignItems:"center",height:25,borderColor:"#cccc"}}>
-                   <Text>T20</Text>
-                   </Pressable>
+        <Pressable onPress={handleT20}
+          style={[ styles.pressable1,
+        { backgroundColor: T20 ? '#3E57C4' : 'transparent' } // Background color changes based on T20 state
+        ]} >
+      <Text style={[{ color: T20 ? 'white' : 'black' }]}>T20</Text>
+    </Pressable>
     
-                   <Pressable onPress={()=>handleOD()}
-                   style={{borderRadius:3,borderWidth:1,width:wp("10%"),flexDirection:"row",display:"flex",justifyContent:"center",alignItems:"center",height:25,borderColor:"#cccc"}}>
-                   <Text>OD</Text>
-                   </Pressable>
-                   <Pressable onPress={()=>handleTest()}
-                   style={{borderRadius:3,borderWidth:1,width:wp("10%"),flexDirection:"row",display:"flex",justifyContent:"center",alignItems:"center",height:25,borderColor:"#cccc"}}>
-                   <Text>Test</Text>
-                   </Pressable>
-                   <Pressable onPress={()=>handleT10()}
-                   style={{borderRadius:3,borderWidth:1,width:wp("10%"),flexDirection:"row",display:"flex",justifyContent:"center",alignItems:"center",height:25,borderColor:"#cccc"}}>
-                   <Text>T10</Text>
-                   </Pressable>
-                   <Pressable onPress={()=>handleHundred()}
-                   style={{borderRadius:3,borderWidth:1,width:wp("30%"),flexDirection:"row",display:"flex",justifyContent:"center",alignItems:"center",height:25,borderColor:"#cccc"}}>
-                   <Text>The Hundred</Text>
-                   </Pressable>
-                   <Pressable onPress={()=>handleSixty()}
-                   style={{borderRadius:3,borderWidth:1,width:wp("12%"),flexDirection:"row",display:"flex",justifyContent:"center",alignItems:"center",height:25,borderColor:"#cccc"}}>
-                   <Text>6ixty</Text>
-                   </Pressable>   
+    <Pressable onPress={handleOD}
+          style={[ styles.pressable1,
+        { backgroundColor: OD ? '#3E57C4' : 'transparent' } // Background color changes based on T20 state
+        ]} >
+      <Text style={[{ color: OD ? 'white' : 'black' }]}>OD</Text>
+    </Pressable>
+
+    <Pressable onPress={handleTest}
+          style={[ styles.pressable1,
+        { backgroundColor: Test ? '#3E57C4' : 'transparent' } // Background color changes based on T20 state
+        ]} >
+      <Text style={[{ color: Test ? 'white' : 'black' }]}>Test</Text>
+    </Pressable>
+
+    <Pressable onPress={handleT10}
+          style={[ styles.pressable1,
+        { backgroundColor: T10 ? '#3E57C4' : 'transparent' } // Background color changes based on T20 state
+        ]} >
+      <Text style={[{ color: T10 ? 'white' : 'black' }]}>T10</Text>
+    </Pressable>
+
+     <Pressable onPress={handleHundred}
+          style={[ styles.pressable2,
+        { backgroundColor: Hundred ? '#3E57C4' : 'transparent' } 
+        ]} >
+      <Text style={[{ color: Hundred ? 'white' : 'black' }]}>The Hundred</Text>
+    </Pressable>
+
+    <Pressable onPress={handleSixty}
+          style={[ styles.pressable1,
+        { backgroundColor: Sixty ? '#3E57C4' : 'transparent' } 
+        ]} >
+      <Text style={[{ color: Sixty ? 'white' : 'black' }]}>6ixty</Text>
+    </Pressable>  
                
                </View>
    
@@ -2084,16 +2103,16 @@ import ODScreen from "./OD";
                     OD && <Text> <ODScreen/> </Text>
                   }
                   {
-                    Test && <Text>Test</Text>
+                    Test && <Text> <TestScreen/> </Text>
                   }
                   {
-                    T10 && <Text>T10</Text>
+                    T10 && <Text> <T10Screen/> </Text>
                   }
                   {
-                    Hundred && <Text>Hundred</Text>
+                    Hundred && <Text><HundredScreen/></Text>
                   }
                   {
-                    Sixty && <Text>Sixty</Text>
+                    Sixty && <Text><SixtyScreen/></Text>
                   }
    
   
@@ -2120,5 +2139,25 @@ import ODScreen from "./OD";
       flexDirection:"row",
       justifyContent:"center",
       
+    },
+    pressable1 : {
+      borderRadius: 3,
+      borderWidth: 1,
+      width: wp('10%'),
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: 25,
+      borderColor: '#cccc',
+    },
+    pressable2 : {
+      borderRadius: 3,
+      borderWidth: 1,
+      width: wp('23%'),
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: 25,
+      borderColor: '#cccc',
     },
   });

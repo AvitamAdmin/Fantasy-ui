@@ -19,7 +19,7 @@ function CustomTabBarIcon({ source }) {
   );
 }
 
-export default function FantacyPointsSystems() {
+export default function FantacyPointsSystems({ navigation }) {
   return (
     <>
       <View style={{display:'flex', flexDirection:'column',width:wp("100%"),}} >

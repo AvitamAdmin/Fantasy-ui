@@ -143,10 +143,10 @@ const DrawerHeader = (props) => {
         </Pressable>
       </View>
       <DrawerItemList {...props} />
-      <DrawerItem
+      {/* <DrawerItem
         label="Fantasy Point System"
         onPress={() => alert("Fantasy Point System")}
-      />
+      /> */}
       {/* <DrawerItem label="About us" onPress={() => alert("About us")} /> */}
       <DrawerItem label="More" onPress={()=>navigation.navigate('More')} />
       <Text style={styles.version}>VERSION 1.22.0</Text>

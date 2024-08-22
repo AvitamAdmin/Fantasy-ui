@@ -10,6 +10,7 @@ export default function More(){
  
     return (
         <View>
+            
             <View style={{width:wp('100%'), justifyContent:'center', alignItems:'center',display:'flex', flexDirection:'row',padding:10}}>
                 <View style={{width: wp('15%')}}>
                 <Image source={require( "../../assets/Legality.png")}  

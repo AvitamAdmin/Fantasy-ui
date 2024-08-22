@@ -8,10 +8,10 @@ import {
   } from "react-native";
   import React, { useState } from "react";
   import { LinearGradient } from "expo-linear-gradient";
-  import { Entypo ,AntDesign} from '@expo/vector-icons';
+  import { Entypo } from '@expo/vector-icons';
   import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-export default function ODScreen(){
+export default function T10Screen(){
     const [Drop, setDrop] = useState(false);
     const [bowling, setBowling] = useState(false)
     const [fielding, setFielding] = useState(false)
