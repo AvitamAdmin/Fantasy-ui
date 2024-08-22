@@ -1161,10 +1161,17 @@ function DrawerScreen() {
         }}
       />
       <Drawer.Screen
-        name="MyinfoAndSettings"
+        name="My info & Settings"
         component={MyinfoAndSettings}
         options={{
           headerShown: true,
+        }}
+      />
+       <Drawer.Screen
+        name="Help & Support"
+        component={HelpAndSupport}
+        options={{
+          headerShown: false,
         }}
       />
        <Drawer.Screen
@@ -1182,13 +1189,7 @@ function DrawerScreen() {
         name="How to Play"
         component={HowToPlay}
       />
-      <Drawer.Screen
-        name="Help & Support"
-        component={HelpAndSupport}
-        options={{
-          headerShown: false,
-        }}
-      />
+     
       <Drawer.Screen
         name="About us"
         component={AboutUs}
@@ -1196,6 +1197,7 @@ function DrawerScreen() {
           headerShown: false,
         }}
       />
+      
     </Drawer.Navigator>
   );
 }
