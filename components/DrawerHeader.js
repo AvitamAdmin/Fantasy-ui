@@ -13,13 +13,14 @@ const DrawerHeader = (props) => {
     const navigation = useNavigation()
   return (
     <DrawerContentScrollView {...props}>
-      <View style={styles.profileContainer}>
+      <View style={{padding: 10,
+    alignItems: "center",}}>
         {/* User profile show name and level in star */}
         <View
           style={{
             display: "flex",
             flexDirection: "row",
-            width: wp("80%"),
+            width: wp("100%"),
             justifyContent: "space-between",
             alignItems: "center",
           }}
@@ -156,8 +157,7 @@ const DrawerHeader = (props) => {
 
 const styles = StyleSheet.create({
   profileContainer: {
-    padding: 10,
-    alignItems: "center",
+    
     // backgroundColor: "#eeeeee",
   },
   profileImage: {

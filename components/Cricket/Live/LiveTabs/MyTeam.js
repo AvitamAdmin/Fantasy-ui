@@ -65,7 +65,7 @@ const MyTeam = () => {
             <View
               style={{
                 display: "flex",
-                width: wp("25%"),
+                width: wp("20%"),
                 flexDirection: "row",
                 justifyContent: "space-between",
                 alignItems: "center",
@@ -79,7 +79,7 @@ const MyTeam = () => {
             <View
               style={{
                 display: "flex",
-                width: wp("30%"),
+                width: wp("25%"),
                 flexDirection: "row",
                 justifyContent: "space-between",
                 alignItems: "center",

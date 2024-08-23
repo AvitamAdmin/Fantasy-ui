@@ -10,8 +10,8 @@ const MyContests = ({setShow,show}) => {
   return (
     <ScrollView style={{width: wp("100%"),padding:10,flexDirection:"column"}}>
       
-    <View style={{width: wp("93%"),display:"flex",flexDirection:"row",justifyContent:"flex-end",gap:10}}>
-    <Pressable style={{width: wp("45%"),display:"flex",flexDirection:"row",justifyContent:"center",gap:10,borderRadius:20,borderWidth:1,opacity:0.7,alignItems:"center",alignContent:"center",height:hp(5)}}>
+    <View style={{width: wp("95%"),display:"flex",flexDirection:"row",justifyContent:"flex-end",gap:10}}>
+    <Pressable style={{width: wp("30%"),display:"flex",flexDirection:"row",justifyContent:"center",gap:10,borderRadius:20,borderWidth:1,opacity:0.7,alignItems:"center",alignContent:"center",height:hp(4.5)}}>
     <View>
      <Octicons name="filter" size={18} color="black" />
      </View>

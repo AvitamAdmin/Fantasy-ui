@@ -463,6 +463,7 @@ function StackScreen() {
             borderBottomWidth: 0,
           },
           headerTintColor: "#fff",
+          
         }}
         name="ADD CASH"
         component={AddCash}

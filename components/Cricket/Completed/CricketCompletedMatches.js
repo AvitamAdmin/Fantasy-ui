@@ -236,14 +236,14 @@ const CricketLiveMatches = () => {
               >
                 <View style={{display: "flex",
                   flexDirection: "row",gap:6,alignItems: "center",
-                  justifyContent: "center",}}>
+                  justifyContent: "center",width: wp("25%")}}>
                 <Text style={{padding:3,paddingLeft:5,borderRadius:15,fontSize:hp(1.8),fontWeight:"bold"}}>1 Team</Text>
                 <Text style={{fontSize:hp(1.9),fontWeight:"bold"}} >3 Contests</Text>
                 </View>
 
 
-                <View style={{backgroundColor:"#e0f7ca",width: wp("20%")}}>
-                  <Text style={{color:"#35B267"}}>  ₹ 1000</Text>
+                <View style={{width: wp("20%")}}>
+                  <Text style={{color:"#35B267",backgroundColor:"#e0f7ca",width: wp("10%")}}>  ₹ 1000</Text>
                 </View>
                
               </View>

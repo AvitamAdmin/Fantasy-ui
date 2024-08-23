@@ -117,7 +117,7 @@ const ReferAndEarn = () => {
                 alignItems: "center",
               }}
             >
-              <Text style={{ fontWeight: "bold", fontSize: hp(4.8), color: "#fff" }}>
+              <Text style={{ fontWeight: "bold", fontSize: hp(4.3), color: "#fff" }}>
                 ₹500
               </Text>
               <Text
@@ -144,8 +144,8 @@ const ReferAndEarn = () => {
           >
             <Image
               source={require("../../assets/Refer&Earn.png")}
-              resizeMode="cover"
-              style={{ width: wp(70), height:hp(35) }}
+              resizeMode="contain"
+            style={{ width: wp(70), height:hp(40) }}
             />
             <Pressable style={{ flexDirection: "column", gap: 5, }}>
               <Text style={{ color: "#fff", fontWeight: "bold" }}>

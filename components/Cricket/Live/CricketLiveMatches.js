@@ -151,7 +151,7 @@ const CricketLiveMatches = () => {
                         flexDirection: "row",
                         alignItems: "center",
                         justifyContent: "center",
-                        width: 100,
+                        width: "100%",
                       }}
                     >
                       <Text style={{ fontSize: hp(1.5) }} numberOfLines={1}>
@@ -217,7 +217,7 @@ const CricketLiveMatches = () => {
                         flexDirection: "row",
                         alignItems: "center",
                         justifyContent: "center",
-                        width: 100,
+                        width: "100%",
                       }}
                     >
                       <Text style={{ fontSize: hp(1.5) }} numberOfLines={1}>
