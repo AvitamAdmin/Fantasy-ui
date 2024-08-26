@@ -149,6 +149,8 @@ import LegalityScreen from "./screens/Drawernavigation/HelpAndSupport/Legality/L
 import HelpAndSupport from "./screens/Drawernavigation/HelpAndSuport";
 import FantacyPointsSystems from "./screens/Drawernavigation/Points/FantasyPointsSystems";
 
+import { Dimensions } from 'react-native';
+
 const getHeaderRight = (navigation) => (
   <View
     style={{
@@ -1143,6 +1145,9 @@ function TabScreen({ navigation }) {
 //Drawer Navigation
 
 const Drawer = createDrawerNavigator();
+// Define screen width breakpoints
+const screenWidth = Dimensions.get('window').width;
+const isTablet = screenWidth >= 768; // Typically, tablets have a width >= 768
 
 function DrawerScreen() {
   return (
@@ -1150,7 +1155,7 @@ function DrawerScreen() {
       drawerContent={(props) => <DrawerHeader {...props} />}
       screenOptions={{
         drawerStyle: {
-          width: 350,
+          width: isTablet ? 760 : 350, // Set different widths for tablet and mobile
         },
       }}
     >

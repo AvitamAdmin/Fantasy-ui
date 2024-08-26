@@ -40,7 +40,7 @@ const DrawerHeader = (props) => {
                 source={require("../assets/UserProfile.png")} // Replace with your profile picture URL
                 style={{ width: wp(18),
                   height: hp(10),
-                  borderRadius: 40,}}
+                  borderRadius: 50,}}
               />
             </View>
             <View style={{ gap: 5 }}>
