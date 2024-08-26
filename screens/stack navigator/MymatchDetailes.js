@@ -4,7 +4,7 @@ import React from 'react'
 const MymatchDetailes = () => {
   return (
     <View>
-      <Text>MymatchDetailes</Text>
+      <Text style={{color:"#f27"}}>MymatchDetailes</Text>
     </View>
   )
 }

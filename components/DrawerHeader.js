@@ -14,15 +14,16 @@ const DrawerHeader = (props) => {
   return (
     <DrawerContentScrollView {...props}>
       <View style={{padding: 10,
-    alignItems: "center",}}>
+    alignItems: "center"}}>
         {/* User profile show name and level in star */}
         <View
           style={{
             display: "flex",
             flexDirection: "row",
             width: wp("100%"),
-            justifyContent: "space-between",
+            justifyContent: "space-around",
             alignItems: "center",
+            // backgroundColor:'#000'
           }}
         >
           <View
@@ -37,7 +38,9 @@ const DrawerHeader = (props) => {
             <View>
               <Image
                 source={require("../assets/UserProfile.png")} // Replace with your profile picture URL
-                style={styles.profileImage}
+                style={{ width: wp(18),
+                  height: hp(10),
+                  borderRadius: 40,}}
               />
             </View>
             <View style={{ gap: 5 }}>
@@ -46,7 +49,7 @@ const DrawerHeader = (props) => {
               >
                 shivam11s
               </Text>
-              <Text style={{ fontSize: hp(2.4), fontWeight: "500" }}>
+              <Text style={{ fontSize: hp(2.2), fontWeight: "500" }}>
                 Total Impacts: 767
               </Text>
             </View>
@@ -54,14 +57,22 @@ const DrawerHeader = (props) => {
           <View style={{}}>
             <Image
               source={require("../assets/starplace.png")} // Replace with your profile picture URL
-              style={{ height: hp(11), width: wp(16), borderRadius: 7 }}
+              style={{ height: hp(11), width: wp(17), borderRadius: 7 }}
             />
           </View>
         </View>
 
         
 {/* wallet balace show container */}
-        <Pressable style={styles.balanceContainer}
+        <Pressable style={{marginTop: 20,
+    width: wp("82%"),
+    alignItems: "center",
+    backgroundColor: "#fff",
+    padding: 10,
+    display: "flex",
+    flexDirection: "column",
+    borderRadius:8,
+    elevation:15}}
         onPress={()=>navigation.navigate('MyBalance')}
         >
           
@@ -89,15 +100,15 @@ const DrawerHeader = (props) => {
               <Pressable 
                onPress={()=>navigation.navigate('MyBalance')}
               >
-                <Text style={styles.balanceText}>My Balance</Text>
+                <Text style={{fontSize: hp(2.5), fontWeight: "500",}}>My Balance</Text>
               </Pressable>
             </View>
             <View>
-              <Text style={styles.balanceAmount}>₹100</Text>
+              <Text style={{fontSize: hp(2.7),fontWeight: "bold",color: "#000",marginTop: 5,}}>₹100</Text>
             </View>
           </View>
-          <View></View>
-          <View style={styles.balanceButtons}>
+          
+          <View style={{flexDirection: "row", justifyContent:"space-between", marginTop: 10, width: wp ("74%")}}>
             <Pressable
             onPress={()=>navigation.navigate("ADD CASH")}
               style={{
@@ -111,7 +122,7 @@ const DrawerHeader = (props) => {
 
               }}
             >
-              <Text style={styles.addCash}>+ ADD CASH</Text>
+              <Text style={{marginRight: 20,color: "#fff",fontWeight: "bold",}}>+ ADD CASH</Text>
             </Pressable>
             <Pressable
               style={{
@@ -133,7 +144,8 @@ const DrawerHeader = (props) => {
                 />
               </View>
               
-                <Pressable  style={styles.withdraw}
+                <Pressable  style={{ color: "#fff",
+    fontWeight: "bold",}}
                 
                 >
                 <Text style={{color:"#fff"}}>WITHDRAW</Text>
@@ -144,69 +156,14 @@ const DrawerHeader = (props) => {
         </Pressable>
       </View>
       <DrawerItemList {...props} />
-      {/* <DrawerItem
-        label="Fantasy Point System"
-        onPress={() => alert("Fantasy Point System")}
-      /> */}
-      {/* <DrawerItem label="About us" onPress={() => alert("About us")} /> */}
       <DrawerItem label="More" onPress={()=>navigation.navigate('More')} />
-      <Text style={styles.version}>VERSION 1.22.0</Text>
+      <Text style={{ marginTop: 20,textAlign: "center",color: "gray",}}>VERSION 1.22.0</Text>
     </DrawerContentScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  profileContainer: {
-    
-    // backgroundColor: "#eeeeee",
-  },
-  profileImage: {
-    width: wp(19),
-    height: hp(11),
-    borderRadius: 40,
-  },
-
-  balanceContainer: {
-    marginTop: 20,
-    width: wp("80%"),
-    alignItems: "center",
-    backgroundColor: "#fff",
-    padding: 10,
-    display: "flex",
-    flexDirection: "column",
-    borderRadius:8,
-    elevation:15
-  },
-  balanceText: {
-    fontSize: hp(2.5),
-    fontWeight: "500",
-  },
-  balanceAmount: {
-    fontSize: hp(2.7),
-    fontWeight: "bold",
-    color: "#000",
-    marginTop: 5,
-  },
-  balanceButtons: {
-    flexDirection: "row",
-    justifyContent:"space-between",
-    marginTop: 10,
-    width: wp ("74%")
-  },
-  addCash: {
-    marginRight: 20,
-    color: "#fff",
-    fontWeight: "bold",
-  },
-  withdraw: {
-    color: "#fff",
-    fontWeight: "bold",
-  },
-  version: {
-    marginTop: 20,
-    textAlign: "center",
-    color: "gray",
-  },
+ 
 });
 
 export default DrawerHeader;
