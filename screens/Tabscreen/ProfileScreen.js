@@ -157,7 +157,7 @@ const ProfileScreen = () => {
                       alignItems: "center",
                     }}
                   >
-                    <Text>100</Text>
+                    <Text style={{fontSize: hp(2)}}>100</Text>
                   </View>
                   <View>
                     <Text style={{ fontWeight: "900", fontSize: hp(2.5) }}>
@@ -174,7 +174,7 @@ const ProfileScreen = () => {
                       alignItems: "center",
                     }}
                   >
-                    <Text>100</Text>
+                    <Text style={{fontSize: hp(2)}}>100</Text>
                   </View>
                   <View>
                     <Text style={{ fontWeight: "900", fontSize: hp(2.5) }}>
@@ -208,15 +208,16 @@ const ProfileScreen = () => {
             </Pressable>
           </View>
         </View>
-        <View style={{ paddingTop: 10, paddingLeft: 20, gap: 10 }}>
+        <View style={{ paddingTop: 10, paddingLeft: 20, gap: 10 , }}>
           <View>
             <Text style={{ fontWeight: "bold", fontSize: hp(2.4) }}>Tier</Text>
           </View>
           <Pressable onPress={() => navigation.navigate("Tire Screen")}>
             <View
               style={{
-                width: wp("90%"),
+                width: wp("93%"),
                 borderRadius: 10,
+                
                 backgroundColor: "#ffff",
                 ...Platform.select({
                   ios: {
@@ -308,7 +309,7 @@ const ProfileScreen = () => {
         <View
           style={{
             paddingTop: 10,
-            paddingLeft: 20,
+            paddingLeft: 17,
             gap: 10,
             paddingBottom: 15,
           }}
@@ -320,8 +321,7 @@ const ProfileScreen = () => {
           </View>
           <View
             style={{
-              width: "95%",
-              borderColor: "#000",
+              width: wp("94%"),
               borderColor: "#000",
               flexDirection: "row",
               padding: 15,
@@ -378,7 +378,7 @@ const ProfileScreen = () => {
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
-            width: wp("90%"),
+            width: wp("93%"),
           }}
         >
           <View style={{ paddingBottom: 10 }}>
@@ -396,7 +396,7 @@ const ProfileScreen = () => {
             </View>
           </Pressable>
         </View>
-        <View style={{ gap: 10, width: wp("90%"),paddingBottom:80 }}>
+        <View style={{ gap: 10, width: wp("95%"),paddingBottom:80 }}>
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
@@ -405,7 +405,7 @@ const ProfileScreen = () => {
             <View
               style={{
                 gap: 10,
-                width: "100%",
+                width: wp("100%"),
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "flex-start",

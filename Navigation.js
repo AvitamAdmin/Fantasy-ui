@@ -1155,7 +1155,8 @@ function DrawerScreen() {
       drawerContent={(props) => <DrawerHeader {...props} />}
       screenOptions={{
         drawerStyle: {
-          width: isTablet ? 760 : 350, // Set different widths for tablet and mobile
+          width: isTablet ? 700 : 350, // Set different widths for tablet and mobile
+          
         },
       }}
     >

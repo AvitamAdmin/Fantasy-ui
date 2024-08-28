@@ -8,9 +8,13 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/core";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { Dimensions } from 'react-native';
+import { useWindowDimensions } from 'react-native';
 
 const DrawerHeader = (props) => {
+  const { width: screenWidth } = useWindowDimensions();
     const navigation = useNavigation()
+    const imageSize = screenWidth >= 768 ? screenWidth * 0.2 : screenWidth * 0.2;
   return (
     <DrawerContentScrollView {...props}>
       <View style={{padding: 10,
@@ -21,9 +25,9 @@ const DrawerHeader = (props) => {
             display: "flex",
             flexDirection: "row",
             width: wp("100%"),
-            justifyContent: "space-around",
+            justifyContent: "space-evenly",
             alignItems: "center",
-            // backgroundColor:'#000'
+            
           }}
         >
           <View
@@ -33,17 +37,21 @@ const DrawerHeader = (props) => {
               gap: 8,
               justifyContent: "space-between",
               alignItems: "center",
+              
             }}
           >
-            <View>
+            <View >
+             
               <Image
-                source={require("../assets/UserProfile.png")} // Replace with your profile picture URL
-                style={{ width: wp(18),
-                  height: hp(10),
-                  borderRadius: 50,}}
-              />
+      source={require('../assets/UserProfile.png')}
+      style={{
+        width: imageSize,      // Responsive width
+        height: imageSize,     // Responsive height to maintain aspect ratio
+        borderRadius: imageSize / 2, // Rounded corners
+      }}
+    />
             </View>
-            <View style={{ gap: 5 }}>
+            <View >
               <Text
                 style={{ fontSize:  hp(2.5), fontWeight: "700", color: "#3f58c5" }}
               >
@@ -54,17 +62,17 @@ const DrawerHeader = (props) => {
               </Text>
             </View>
           </View>
-          <View style={{}}>
+          <View >
             <Image
               source={require("../assets/starplace.png")} // Replace with your profile picture URL
-              style={{ height: hp(11), width: wp(17), borderRadius: 7 }}
+              style={{ height: hp(11), width: wp(17),  }}
             />
           </View>
         </View>
 
         
 {/* wallet balace show container */}
-        <Pressable style={{marginTop: 20,
+        <Pressable style={{marginTop: 20,        
     width: wp("82%"),
     alignItems: "center",
     backgroundColor: "#fff",
@@ -78,9 +86,10 @@ const DrawerHeader = (props) => {
           
           <View
             style={{
+              // backgroundColor:'#000',
               display: "flex",
               flexDirection: "row",
-              width: wp("73%"),
+              width: wp("74%"),
               justifyContent: "space-between",
               alignItems: "center",
             }}
@@ -92,15 +101,16 @@ const DrawerHeader = (props) => {
                 gap: 5,
                 justifyContent: "center",
                 alignItems: "center",
+                
               }}
             >
               <View>
-                <Ionicons name="wallet-outline" size={24} color="black" />
+                <Ionicons name="wallet-outline" size={25} color="black" />
               </View>
               <Pressable 
                onPress={()=>navigation.navigate('MyBalance')}
               >
-                <Text style={{fontSize: hp(2.5), fontWeight: "500",}}>My Balance</Text>
+                <Text style={{fontSize: hp(2.3), fontWeight: "500",}}>My Balance</Text>
               </Pressable>
             </View>
             <View>
@@ -108,7 +118,7 @@ const DrawerHeader = (props) => {
             </View>
           </View>
           
-          <View style={{flexDirection: "row", justifyContent:"space-between", marginTop: 10, width: wp ("74%")}}>
+          <View style={{flexDirection: "row", justifyContent:"space-between", marginTop: 10, width: wp("77%")}}>
             <Pressable
             onPress={()=>navigation.navigate("ADD CASH")}
               style={{
@@ -118,11 +128,12 @@ const DrawerHeader = (props) => {
                 paddingRight: 20,
                 paddingLeft: 20,
                 padding: 5,
-                borderRadius:4
+                borderRadius:4,
+                // width: wp('23%')
 
               }}
             >
-              <Text style={{marginRight: 20,color: "#fff",fontWeight: "bold",}}>+ ADD CASH</Text>
+              <Text style={{marginRight: 20,color: "#fff",fontWeight: "bold", textAlign:'center'}}>+ ADD CASH</Text>
             </Pressable>
             <Pressable
               style={{
@@ -133,7 +144,9 @@ const DrawerHeader = (props) => {
                 paddingRight: 20,
                 paddingLeft: 20,
                 padding: 5,
-                borderRadius:4
+                borderRadius:4,
+               
+                // width: wp('22%')
               }}
               onPress={()=>navigation.navigate('WITHDRAW')}
             >
@@ -148,7 +161,7 @@ const DrawerHeader = (props) => {
     fontWeight: "bold",}}
                 
                 >
-                <Text style={{color:"#fff"}}>WITHDRAW</Text>
+                <Text style={{color:"#fff",}}>WITHDRAW</Text>
                 </Pressable>
               
             </Pressable>

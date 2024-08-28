@@ -46,7 +46,7 @@ const TireScreen = () => {
                 Tier == 'DIAMOND' && <Image source={require('../../assets/Diamond.png')} style={styles.TierImage}/>
               }
               {
-                Tier == 'THE STAR' && <Image source={require('../../assets/starplace.png')} style={styles.TierImage}/>
+                Tier == 'THE STAR' && <Image source={require('../../assets/Star png 1.png')} style={styles.TierImage}/>
               }
               {
                 Tier == 'LEGEND' && <Image source={require('../../assets/Legend.png')} style={styles.TierImage}/>
@@ -55,30 +55,48 @@ const TireScreen = () => {
             <View style={{alignItems:"center"}}>
               <Text style={{color:"#fff",fontSize:hp(3),fontWeight:"bold",paddingBottom:13}}>{Tier}</Text>
             </View>
+            
             <View style={styles.flowImages}>
-            <View style={styles.tiertest}>
-            <Image source={require('../../assets/Bronze.png')} style={styles.bronzeimg}/>
-            </View>
-            <View style={styles.tiertest}>
-            <Image source={require('../../assets/Bronze.png')} style={styles.bronzeimg}/>
-            </View>
-            <View style={styles.tiertest}>
-            <Image source={require('../../assets/Bronze.png')} style={styles.bronzeimg}/>
-            </View>
-            <View style={styles.tiertest}>
-            <Image source={require('../../assets/Bronze.png')} style={styles.bronzeimg}/>
-            </View>
-            <View style={styles.tiertest}>
-            <Image source={require('../../assets/Bronze.png')} style={styles.bronzeimg}/>
-            </View>
-            <View style={styles.tiertest}>
-            <Image source={require('../../assets/Bronze.png')} style={styles.bronzeimg}/>
-            </View>
-        </View>
+      <View style={styles.tiertest}>
+        <Image source={require('../../assets/Bronze.png')} style={styles.bronzeimg} />
+        <View style={styles.horizontalLine} />
+      </View>
+      <View style={styles.tiertest}>
+        <Image source={require('../../assets/Silver.png')} style={styles.bronzeimg} />
+       
+        <View style={styles.horizontalLine} />
+      </View>
+      <View style={styles.tiertest}>
+        <Image source={require('../../assets/Gold.png')} style={styles.bronzeimg} />
+        
+        <View style={styles.horizontalLine} />
+      </View>
+      <View style={styles.tiertest}>
+        <Image source={require('../../assets/Diamond.png')} style={styles.bronzeimg} />
+        
+        <View style={styles.horizontalLine} />
+      </View>
+      <View style={styles.tiertest}>
+        <Image source={require('../../assets/Star png 1.png')} style={styles.bronzeimg} />
+      
+        <View style={styles.horizontalLine} />
+      </View>
+      <View style={styles.tiertest}>
+        <Image source={require('../../assets/Legend.png')} style={styles.bronzeimg} />
+      
+      </View>
+    </View>
           </View>
         </View>
        
-        
+        <View style={{display:'flex', flexDirection:'row',justifyContent:'space-around',width:wp('98%'),}}>
+        <Text style={styles.label}>Bronze</Text>
+        <Text style={styles.label}>Silver</Text>
+        <Text style={styles.label}>Gold</Text>
+        <Text style={styles.label}>Diamond</Text>
+        <Text style={styles.label}>The Star</Text>
+        <Text style={styles.label}>Legend</Text>
+        </View>
         <View style={{padding:20}}>
           <Text style={{color:"#fff",fontWeight:"bold",fontSize: hp(2.3)}}>Total Impacts</Text>
         </View>
@@ -187,29 +205,7 @@ const styles = StyleSheet.create({
         display:"flex",
         alignItems:"center"
       },
-      flowImages:{
-        flexDirection:"row",
-        display:"flex",
-        width:wp("95%"),
-        justifyContent:"space-between",
-        padding:13,
-        backgroundColor:"#196",
-
-      },
-      bronzeimg:{
-         height: hp(4),
-         width:wp(7),
-         
-      },
-      tiertest:{
-        borderRadius:40,
-        padding:5,
-        borderWidth:2,
-        borderColor:"#fff"    ,
-        
-        },
-        impactScoreBg:{
-                    
+        impactScoreBg:{         
           width: wp("40%"),
           justifyContent:"center",
           display:"flex",
@@ -218,12 +214,9 @@ const styles = StyleSheet.create({
           borderWidth:1,
           borderColor:"#fff",
           borderRadius:6
-
-        },
-        
+        }, 
         impactScore:{
-          color:"#fff",
-          
+          color:"#fff",   
           padding:8,
           fontWeight:"bold",
           fontSize:30
@@ -231,6 +224,38 @@ const styles = StyleSheet.create({
         progressbar:{
           width:wp("100%"),display:"flex",flexDirection:"row",justifyContent:"center",padding:20
         },
-
-
+        
+        flowImages: {
+          flexDirection: 'row',
+          alignItems: 'center',
+        },
+        tiertest: {
+          flexDirection: 'row',
+          alignItems: 'center',
+          // padding: 1,  // Add some padding inside the border
+  },
+        bronzeimg: {
+          
+          width: wp(11),
+          height: hp(6),
+          resizeMode: 'contain',
+          borderRadius: 50,  // Adjust based on image size for full circular effect
+          borderWidth: 2,  // Adjust the thickness of the border
+          borderColor: '#fff'
+        },
+        horizontalLine: {
+          width: wp(5),  // Adjust width as needed
+          height: 2.5,
+          backgroundColor: '#fff' // Change color to match your design
+          
+        },
+        label: {
+          color: '#fff',
+          fontSize: hp(1.7),
+          marginTop: 5,
+          textAlign: 'center',
+          paddingLeft:10,
+          width:wp('24%')
+        },
+        
 })
