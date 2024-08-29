@@ -29,7 +29,7 @@ export default function ODScreen(){
                 colors={["#3951B5", "#2D3F8F", "#1F2B61"]}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 0 }}
-            >
+            >       
                 <Text
                     style={{
                         color: "#fff",

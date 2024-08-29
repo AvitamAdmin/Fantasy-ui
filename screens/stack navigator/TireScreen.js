@@ -22,7 +22,7 @@ const TireScreen = () => {
     colors={['#3247A0','#1B2656','#020202','#020202']}
         style={styles.background}
     >
-       <View style={{justifyContent:"center",width: wp("100%"),display:"flex",flexDirection:"column",}}>
+       <View style={{justifyContent:"center",width: wp("100%"),display:"flex",flexDirection:"column"}}>
        <Pressable onPress={()=>navigation.goBack()} style={styles.back}>
         <Ionicons name="arrow-back" size={30} color="#fff" />
         </Pressable>
@@ -100,25 +100,40 @@ const TireScreen = () => {
         <View style={{padding:20}}>
           <Text style={{color:"#fff",fontWeight:"bold",fontSize: hp(2.3)}}>Total Impacts</Text>
         </View>
-       <View style={{width:"100%",display:"flex",flexDirection:"row",justifyContent:"center"}}>
+       <View style={{width:"100%",display:"flex",flexDirection:"row",justifyContent:"center",paddingBottom:10}}>
        <View style={styles.impactScoreBg}>
         <Text style={styles.impactScore}>{ImpactScore}</Text>
       </View>
        </View>
 
        <View style={styles.progressbar}>
-       <Progress.Bar
-                  progress={0.3}
-                  width={243}
-                  height={3}
-                  borderWidth={0.2}
-                  backgroundColor="#ABABAB"
-                />
-       </View>
+        <View style={{justifyContent:'center',display:'flex',width:wp('100%'),alignItems:"center",flexDirection:"row"}}>
+       
 
-       <View style={{width:wp("100%"),flexDirection:"column",display:"flex",justifyContent:"center",gap:5}}>
+        <Progress.Bar
+          progress={0.3}
+          width={wp(60)}          // Adjusts to 70% of the screen width
+          height={hp(0.4)}        // Adjusts to 0.4% of the screen height
+          borderWidth={hp(0.1)}   // Adjusts the border width based on screen height
+          backgroundColor="#ABABAB"
+          borderColor=''
+        />
+        </View>
+      
+                <View style={{justifyContent:'space-around', display:'flex',width:wp("100%"), flexDirection:'row'}} >
+        <Text style={{color:'#fff',fontSize:hp(2)}}>
+              0
+        </Text>
+        <Text style={{color:'#fff',fontSize:hp(2)}}>
+              1000
+        </Text>
+       </View>
+       </View>
+      
+
+       <View style={{width:wp("100%"),flexDirection:"column",display:"flex",justifyContent:"center"}}>
        <View style={{width:wp("100%"),display:"flex",flexDirection:"row",justifyContent:"center"}}>
-       <View style={{width: wp("90%"),display:"flex",flexDirection:"row",justifyContent:"center"}}>
+       <View style={{width: wp("92%"),display:"flex",flexDirection:"row",justifyContent:"center"}}>
         <Text style={{color:"#fff",fontSize:hp(2),textAlign:"justify"}}>Total Impacts points is based on performance of your last
        25 matches you played in Impact11(Includes all sports).Total impacts affected by all matches you play, so make sure you consistently perform well.</Text>
        </View>
@@ -127,7 +142,7 @@ const TireScreen = () => {
        <View style={{width:wp("100%"),display:"flex",flexDirection:"row",justifyContent:"center",padding:10}}>
        <View style={{width:wp("90%"),display:"flex",flexDirection:"row",justifyContent:"flex-start",gap:5}}>
         <View>
-        <FontAwesome5 name="question-circle" size={20} color="#fff" />
+        <FontAwesome5 name="question-circle" size={26} color="#fff" />
         </View>
         <View>
         <Text style={{color:"#fff",fontSize:hp(2),fontWeight:"bold"}}>
@@ -139,7 +154,7 @@ const TireScreen = () => {
 
        </View>
        <View style={{width:wp("100%"),display:"flex",flexDirection:"row",justifyContent:"center",padding:10}}>
-       <View style={{width: wp("90%"),display:"flex",flexDirection:"column",justifyContent:"flex-start",gap:2}} >
+       <View style={{width: wp("89%"),display:"flex",flexDirection:"column",justifyContent:"flex-start",gap:2}} >
         <Text style={{color:"#fff",fontSize:hp(2),textAlign:"justify"}}>Maximum achievable Impact point is 999</Text>
         <Text style={{color:"#fff",fontSize:hp(2),textAlign:"justify"}}>Total Impacts is only for evaluating your most Recent
         form in Impact11 and it will not affect your Impact11 
@@ -206,7 +221,7 @@ const styles = StyleSheet.create({
         alignItems:"center"
       },
         impactScoreBg:{         
-          width: wp("40%"),
+          width: wp("35%"),
           justifyContent:"center",
           display:"flex",
           flexDirection:"row",
@@ -219,10 +234,10 @@ const styles = StyleSheet.create({
           color:"#fff",   
           padding:8,
           fontWeight:"bold",
-          fontSize:30
+          fontSize:hp(3.5)
         },
         progressbar:{
-          width:wp("100%"),display:"flex",flexDirection:"row",justifyContent:"center",padding:20
+          width:wp("100%"),display:"flex",justifyContent:"center",padding:20,flexDirection:'column',alignItems:'center',paddingBottom:10
         },
         
         flowImages: {
@@ -233,21 +248,19 @@ const styles = StyleSheet.create({
           flexDirection: 'row',
           alignItems: 'center',
           // padding: 1,  // Add some padding inside the border
-  },
+        },
         bronzeimg: {
-          
-          width: wp(11),
-          height: hp(6),
-          resizeMode: 'contain',
-          borderRadius: 50,  // Adjust based on image size for full circular effect
-          borderWidth: 2,  // Adjust the thickness of the border
-          borderColor: '#fff'
+    width: wp(11),
+    height: wp(11),  // Set height equal to width for a perfect circle
+    resizeMode: 'contain',
+    borderRadius: wp(11) / 2,  // Half of the width for a full circular effect
+    borderWidth: 2,  // Adjust the thickness of the border
+    borderColor: '#fff',
         },
         horizontalLine: {
           width: wp(5),  // Adjust width as needed
           height: 2.5,
-          backgroundColor: '#fff' // Change color to match your design
-          
+          backgroundColor: '#fff' // Change color to match your design  
         },
         label: {
           color: '#fff',

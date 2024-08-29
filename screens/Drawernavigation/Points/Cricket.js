@@ -631,7 +631,7 @@ import SixtyScreen from "./Sixty";
             }}
           >
             <View style={{ width: wp("45%") }}>
-              <Text style={{ fontWeight: "bold" }}>Dismissed For Duck</Text>
+              <Text style={{ fontWeight: "bold" }}>Dismissal For Duck</Text>
             </View>
             <View
               style={{
@@ -907,8 +907,7 @@ import SixtyScreen from "./Sixty";
     </LinearGradient>
   
     <LinearGradient
-    style={{
-      
+    style={{  
       justifyContent: "center", 
       alignItems: "center",
      width: wp("90%"),
@@ -923,8 +922,7 @@ import SixtyScreen from "./Sixty";
   <View
         style={{
           width: wp("85%"),
-          flexDirection: "row",
-         
+          flexDirection: "row",    
           display: "flex",
           alignItems: "center",
         }}
@@ -1310,15 +1308,9 @@ import SixtyScreen from "./Sixty";
               gap: 5,
             }}
           >
-            <Text style={{ fontWeight: "bold", color: "#ff0000" }}>-2 Pts</Text>
-             
-              
-           
-          </View>
+        </View>
         </View>
     </LinearGradient>
-  
-    
   
   <LinearGradient
       style={{
@@ -1964,7 +1956,7 @@ import SixtyScreen from "./Sixty";
                   gap: 5,
                 }}
               >
-                <Text style={{ fontWeight: "bold", color: "#00A000" }}>2X</Text>
+                <Text style={{ fontWeight: "bold", color: "#00A000" }}>2x</Text>
                  
                
               </View>
@@ -2006,7 +1998,7 @@ import SixtyScreen from "./Sixty";
                 gap: 5,
               }}
             >
-              <Text style={{ fontWeight: "bold", color: "#00A000" }}>1.5X</Text>
+              <Text style={{ fontWeight: "bold", color: "#00A000" }}>1.5x</Text>
             </View>
           </View>
       </LinearGradient>
