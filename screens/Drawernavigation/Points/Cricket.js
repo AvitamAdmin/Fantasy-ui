@@ -202,28 +202,30 @@ import SixtyScreen from "./Sixty";
                 style={{
                   width: 80,
                   height: 80,
-                  resizeMode: "contain",
+                  resizeMode: "cover",
                   alignItems: "baseline",
-                }}
-              />
+                }}/>
               <View
                 style={{
                   flex: 1,
                   marginLeft: 10,
-                }}
-              >
+                }}>
+
+              <View style={{marginBottom:hp(1)}}>
+                 <LinearGradient style={{borderRadius: 5}}
+                       colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
+                                    start={{ x: 1, y: 1 }}
+                                    end={{ x: 0, y: 0 }}>
                 <View
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
-                    marginVertical: 5,
-                  }}
-                >
+                    marginVertical: 5,   
+                  }}>
                   <Text
                     style={{
                       fontWeight: "bold",
-                    }}
-                  >
+                    }}>
                     Wicket
                   </Text>
                   <Text
@@ -231,30 +233,40 @@ import SixtyScreen from "./Sixty";
                       color: "#00A000",
                       fontWeight: "bold",
                     }}
-                  >+25 Pts
-                  </Text>
+                  >+25 Pts </Text>
                 </View>
+                </LinearGradient>
+              </View>
+              <View style={{marginBottom:hp(1)}}>
+                <LinearGradient  style={{borderRadius: 5}}
+                       colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
+                                    start={{ x: 1, y: 1 }}
+                                    end={{ x: 0, y: 0 }}>
                 <View
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
-                    marginVertical: 5,
-                  }}
-                >
+                    marginVertical: 5,  
+                  }}>
                   <Text
                     style={{
                       fontWeight: "bold",
-                    }}
-                  >Runs
+                    }}>Runs
                   </Text>
                   <Text
                     style={{
                       color: "#00A000",
                       fontWeight: "bold",
                     }}
-                  >+1 Pts
-                  </Text>
+                    >+1 Pts </Text>
                 </View>
+                </LinearGradient>
+                </View>
+                <View>
+                <LinearGradient  style={{borderRadius: 5}}
+                       colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
+                                    start={{ x: 1, y: 1 }}
+                                    end={{ x: 0, y: 0 }}>
                 <View
                   style={{
                     flexDirection: "row",
@@ -276,6 +288,10 @@ import SixtyScreen from "./Sixty";
                     
                   
                 </View>
+                </LinearGradient>
+                </View>
+
+                
               </View>
             </View>
           </LinearGradient>
@@ -393,8 +409,7 @@ import SixtyScreen from "./Sixty";
           </LinearGradient>
   
           <LinearGradient
-          style={{
-            
+          style={{  
             justifyContent: "center", 
             alignItems: "center",
            width: wp("90%"),
@@ -453,7 +468,6 @@ import SixtyScreen from "./Sixty";
                 style={{
                   width: wp("85%"),
                   flexDirection: "row",
-                 
                   display: "flex",
                   alignItems: "center",
                 }}
@@ -502,7 +516,7 @@ import SixtyScreen from "./Sixty";
                 }}
               >
                 <View style={{ width: wp("45%") }}>
-                  <Text style={{ fontWeight: "bold" }}>30+ Runs</Text>
+                  <Text style={{ fontWeight: "bold" }}>30 Run Bonus</Text>
                 </View>
                 <View
                   style={{
@@ -631,7 +645,7 @@ import SixtyScreen from "./Sixty";
             }}
           >
             <View style={{ width: wp("45%") }}>
-              <Text style={{ fontWeight: "bold" }}>Dismissal For Duck</Text>
+              <Text style={{ fontWeight: "bold" }}>Dismissal For A Duck</Text>
             </View>
             <View
               style={{
@@ -674,8 +688,8 @@ import SixtyScreen from "./Sixty";
           }}
         >
           <View style={{ width: wp("55%" )}}>
-            <Text style={{ fontWeight: "bold" }}>Strick Rate Points(Except Bowler)</Text>
-            <Text style={{fontSize: hp(1.6)}}>(Minimum 10 Balls to be Played)</Text>
+            <Text style={{ fontWeight: "bold" }}>Strick Rate (Except Bowler) Points</Text>
+            <Text style={{fontSize: hp(1.6)}}>(Min 10 Balls to be Played)</Text>
           </View>
           <View
             style={{
@@ -1297,7 +1311,7 @@ import SixtyScreen from "./Sixty";
         >
           <View style={{ width: wp("50%") }}>
             <Text style={{ fontWeight: "bold" }}>Economy Rate Points</Text>
-            <Text style={{fontSize:10}}>(Minimum 2 Overs to be Bowled)</Text>
+            <Text style={{fontSize:10}}>(Min 2 Overs to be Bowled)</Text>
           </View>
           <View
             style={{
@@ -1842,19 +1856,12 @@ import SixtyScreen from "./Sixty";
                   display: "flex",
                   justifyContent: "flex-end",
                   gap: 5,
-                }}
-              >
-                <Text style={{ fontWeight: "bold", color: "#00A000" }}> +6 Pts</Text>
-                 
-                 
-                
+                }}>
+                <Text style={{ fontWeight: "bold", color: "#00A000" }}> +6 Pts</Text> 
               </View>
             </View>
-        </LinearGradient>
-  
-      
-    
-          </View>
+        </LinearGradient>   
+     </View>
         )}
       </Pressable>
     </View>
@@ -2027,7 +2034,7 @@ import SixtyScreen from "./Sixty";
               }}
             >
               <View style={{ width: wp("50%") }}>
-                <Text style={{ fontWeight: "bold" }}>In Announced LineUp</Text>
+                <Text style={{ fontWeight: "bold" }}>In Announced Lineups</Text>
               </View>
               <View
                 style={{

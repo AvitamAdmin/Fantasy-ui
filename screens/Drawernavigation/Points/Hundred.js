@@ -54,15 +54,20 @@ export default function HundredScreen(){
                         style={{
                             width: 80,
                             height: 80,
-                            resizeMode: "contain",
+                            resizeMode: "cover",
                             alignItems: "baseline",
                         }} />
                     <View
                         style={{
                             flex: 1,
                             marginLeft: 10,
-                        }}
-                    >
+                        }}>
+                            
+                            <View style={{marginBottom:hp(1)}}>
+                        <LinearGradient style={{borderRadius: 5}}
+                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
+                                    start={{ x: 1, y: 0 }}
+                                    end={{ x: 0, y: 0 }}>
                         <View
                             style={{
                                 flexDirection: "row",
@@ -73,51 +78,56 @@ export default function HundredScreen(){
                             <Text
                                 style={{
                                     fontWeight: "bold",
-                                }}
-                            >
+                                }}>
                                 Wicket
                             </Text>
                             <Text
                                 style={{
                                     color: "#00A000",
                                     fontWeight: "bold",
-                                }}
-                            >+25 Pts
-                            </Text>
+                                }}>+25 Pts </Text>
                         </View>
+                        </LinearGradient>
+                        </View>
+
+                        <View style={{marginBottom:hp(1)}}>
+                        <LinearGradient style={{borderRadius: 5}}
+                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
+                                    start={{ x: 1, y: 0 }}
+                                    end={{ x: 0, y: 0 }}>
                         <View
                             style={{
                                 flexDirection: "row",
                                 justifyContent: "space-between",
-                                marginVertical: 5,
-                            }}
-                        >
+                                marginVertical: 5,}}>
                             <Text
                                 style={{
-                                    fontWeight: "bold",
-                                }}
-                            >Runs
+                                    fontWeight: "bold", }}>Runs
                             </Text>
                             <Text
                                 style={{
                                     color: "#00A000",
                                     fontWeight: "bold",
-                                }}
-                            >+1 Pts
-                            </Text>
+                                }}>+1 Pts </Text>
                         </View>
+                        </LinearGradient>
+                        </View>
+
+                        <View style={{marginBottom:hp(1)}}>
+                        <LinearGradient style={{borderRadius: 5}}
+                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
+                                    start={{ x: 1, y: 0 }}
+                                    end={{ x: 0, y: 0 }}>
                         <View
                             style={{
                                 flexDirection: "row",
                                 justifyContent: "space-between",
                                 marginVertical: 5,
-                            }}
-                        >
+                            }}>
                             <Text
                                 style={{
                                     fontWeight: "bold",
-                                }}
-                            >Catches
+                                }}>Catches
                             </Text>
                             <Text
                                 style={{
@@ -125,8 +135,10 @@ export default function HundredScreen(){
                                     fontWeight: "bold",
                                 }}>+8 Pts </Text>
 
-
+                            </View>
+                         </LinearGradient>
                         </View>
+
                     </View>
                 </View>
             </LinearGradient>
