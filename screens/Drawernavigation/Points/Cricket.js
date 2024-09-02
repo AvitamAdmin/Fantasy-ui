@@ -6,10 +6,10 @@ import {
     Text,
     View,
   } from "react-native";
-  import React, { useState } from "react";
-  import { LinearGradient } from "expo-linear-gradient";
-  import { Entypo ,AntDesign} from '@expo/vector-icons';
-  import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import React, { useState } from "react";
+import { LinearGradient } from "expo-linear-gradient";
+import { Entypo } from '@expo/vector-icons';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import ODScreen from "./OD";
 import TestScreen from "./Test";
 import T10Screen from "./T10";

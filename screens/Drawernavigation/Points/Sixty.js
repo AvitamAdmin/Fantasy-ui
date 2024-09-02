@@ -28,16 +28,14 @@ export default function SixtyScreen(){
                 }}
                 colors={["#3951B5", "#2D3F8F", "#1F2B61"]}
                 start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 0 }}
-            >
+                end={{ x: 1, y: 0 }}>
                 <Text
                     style={{
                         color: "#fff",
                         fontWeight: "bold",
                         textAlign: "center",
                         paddingBottom: 10,
-                    }}
-                >
+                    }}>
                     IMPORTANT FANTASY POINTS
                 </Text>
                 <View
@@ -47,8 +45,7 @@ export default function SixtyScreen(){
                         borderRadius: 10,
                         backgroundColor: "#fff",
                         justifyContent: "flex-end",
-                    }}
-                >
+                    }}>
                     <Image
                         source={require("../../../assets/ImportantFantasyPoints 1.png")}
                         style={{
@@ -61,8 +58,7 @@ export default function SixtyScreen(){
                         style={{
                             flex: 1,
                             marginLeft: 10,
-                        }}
-                    >
+                        }}>
                         <View style={{marginBottom:hp(1)}}>
                  <LinearGradient style={{borderRadius: 5}}
                        colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
@@ -72,15 +68,12 @@ export default function SixtyScreen(){
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
-                    marginVertical: 5,
-                     
-                  }}
-                >
+                    marginVertical: 5,   
+                  }}>
                   <Text
                     style={{
                       fontWeight: "bold",
-                    }}
-                  >
+                    }}>
                     Wicket
                   </Text>
                   <Text
@@ -88,7 +81,7 @@ export default function SixtyScreen(){
                       color: "#00A000",
                       fontWeight: "bold",
                     }}
-                  >+25 Pts </Text>
+                   >+25 Pts </Text>
                 </View>
                 </LinearGradient>
               </View>
@@ -101,10 +94,8 @@ export default function SixtyScreen(){
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
-                    marginVertical: 5,
-                   
-                  }}
-                >
+                    marginVertical: 5,                   
+                  }} >
                   <Text
                     style={{
                       fontWeight: "bold",
@@ -130,8 +121,7 @@ export default function SixtyScreen(){
                     flexDirection: "row",
                     justifyContent: "space-between",
                     marginVertical: 5,
-                  }}
-                >
+                  }}>
                   <Text
                     style={{
                       fontWeight: "bold",
@@ -142,19 +132,19 @@ export default function SixtyScreen(){
                       color: "#00A000",
                       fontWeight: "bold",
                     }}>+8 Pts  </Text>
-                    
-                  
+                       
                 </View>
                 </LinearGradient>
                 </View>
                     </View>
                 </View>
             </LinearGradient>
-        </View><ScrollView style={{
-            width: wp("95%"), height: hp("100%"), flexDirection: "column",
-            display: "flex", paddingBottom: 10, padding: 5
 
-        }}>
+
+        </View>
+        <ScrollView style={{
+            width: wp("95%"), height: hp("100%"), flexDirection: "column",
+            display: "flex", paddingBottom: 10, padding: 5}}>
 
                 <View
                     style={{
@@ -163,8 +153,7 @@ export default function SixtyScreen(){
                         display: "flex",
                         justifyContent: "center",
                         paddingTop: 10,
-                    }}
-                >
+                    }}>
                     <Pressable
                         onPress={() => {
                             setDrop(!Drop);
@@ -177,8 +166,7 @@ export default function SixtyScreen(){
                             borderWidth: 1.5,
                             borderRadius: 5,
                             borderColor: "#cccccc",
-                        }}
-                    >
+                        }}>
                         <View
                             style={{
                                 width: wp("92%"),
@@ -186,17 +174,14 @@ export default function SixtyScreen(){
                                 display: "flex",
                                 justifyContent: "space-between",
                                 padding: 10,
-                            }}
-                        >
+                            }}>
                             <Text style={{ fontWeight: "bold" }}>Batting</Text>
                             <View
-                                style={{ flexDirection: "row", gap: 5, alignItems: "center" }}
-                            >
+                                style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
                                 <Pressable
                                     onPress={() => {
                                         setDrop(!Drop);
-                                    } }
-                                >
+                                    }}>
                                     {Drop ? (
                                         <Entypo name="chevron-small-up" size={24} color="black" />
                                     ) : (
@@ -214,8 +199,7 @@ export default function SixtyScreen(){
                                     alignItems: "center",
                                     gap: 15,
                                     paddingBottom: 5,
-                                }}
-                            >
+                                }}>
                                 <LinearGradient
                                     style={{
                                         justifyContent: "center",
@@ -227,17 +211,14 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
-
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("40%") }}>
                                             <Text style={{ fontWeight: "bold" }}>Run</Text>
                                         </View>
@@ -248,12 +229,8 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
+                                            }}>
                                             <Text style={{ fontWeight: "bold", color: "#00A000" }}>+1 Pts</Text>
-
-
-
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -269,8 +246,7 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
@@ -278,8 +254,7 @@ export default function SixtyScreen(){
 
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("45%") }}>
                                             <Text style={{ fontWeight: "bold" }}>Boundary Bonus</Text>
                                         </View>
@@ -290,12 +265,8 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
+                                            }}>
                                             <Text style={{ fontWeight: "bold", color: "#00A000" }}>+1 Pts</Text>
-
-
-
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -311,8 +282,8 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
+
                                     <View
                                         style={{
                                             width: wp("85%"),
@@ -320,8 +291,7 @@ export default function SixtyScreen(){
 
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("45%") }}>
                                             <Text style={{ fontWeight: "bold" }}>Six Bonus</Text>
                                         </View>
@@ -332,12 +302,9 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
+                                            }}>
                                             <Text style={{ fontWeight: "bold", color: "#00A000" }}>+2 Pts</Text>
 
-
-
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -353,59 +320,14 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
-
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
-                                        <View style={{ width: wp("45%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>30+ Runs</Text>
-                                        </View>
-                                        <View
-                                            style={{
-                                                width: wp("40%"),
-                                                flexDirection: "row",
-                                                display: "flex",
-                                                justifyContent: "flex-end",
-                                                gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+4 Pts</Text>
-
-
-
-                                        </View>
-                                    </View>
-                                </LinearGradient>
-
-                                <LinearGradient
-                                    style={{
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        width: wp("90%"),
-                                        display: "flex",
-                                        flexDirection: 'column',
-                                        padding: 5
-                                    }}
-                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
-                                    start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
-                                    <View
-                                        style={{
-                                            width: wp("85%"),
-                                            flexDirection: "row",
-
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("45%") }}>
                                             <Text style={{ fontWeight: "bold" }}>Half Century Bonus</Text>
                                         </View>
@@ -416,11 +338,8 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+8 Pts</Text>
-
-
+                                            }}>
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+4 Pts</Text>
 
                                         </View>
                                     </View>
@@ -437,8 +356,7 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
@@ -446,8 +364,7 @@ export default function SixtyScreen(){
 
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("45%") }}>
                                             <Text style={{ fontWeight: "bold" }}>Century Bonus</Text>
                                         </View>
@@ -458,11 +375,8 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+16 Pts</Text>
-
-
+                                            }}>
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+8 Pts</Text>
 
                                         </View>
                                     </View>
@@ -479,8 +393,7 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
@@ -488,10 +401,9 @@ export default function SixtyScreen(){
 
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("45%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Dismissed For Duck</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Dismissal For A Duck</Text>
                                         </View>
                                         <View
                                             style={{
@@ -500,11 +412,8 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#ff0000" }}>-2 Pts</Text>
-
-
+                                            }}>
+                                            <Text style={{ fontWeight: "bold", color: "#ff0000" }}>-3 Pts</Text>
 
                                         </View>
                                     </View>
@@ -521,8 +430,7 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
@@ -530,11 +438,11 @@ export default function SixtyScreen(){
 
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
+
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Strick Rate Points(Except Bowler)</Text>
-                                            <Text style={{ fontSize: hp(1.6) }}>(Minimum 10 Balls to be Played)</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Strick Rate (Except Bowler) Points</Text>
+                                            <Text style={{ fontSize: hp(1.6) }}>(Min 20 Balls to be Played)</Text>
                                         </View>
                                         <View
                                             style={{
@@ -543,9 +451,7 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
-
+                                            }}>
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -561,8 +467,7 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }} >
                                     <View
                                         style={{
                                             width: wp("85%"),
@@ -570,10 +475,9 @@ export default function SixtyScreen(){
 
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Above 170 runs per 100 balls</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Above 140 runs per 100 balls</Text>
                                         </View>
                                         <View
                                             style={{
@@ -582,12 +486,9 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
+                                            }}>
                                             <Text style={{ fontWeight: "bold", color: "#00A000" }}>+6 Pts</Text>
 
-
-
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -603,19 +504,16 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
-
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 150.01 - 170 runs per 100 balls</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 120.01 - 140 runs per 100 balls</Text>
                                         </View>
                                         <View
                                             style={{
@@ -624,11 +522,8 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
+                                            }} >
                                             <Text style={{ fontWeight: "bold", color: "#00A000" }}>+4 Pts</Text>
-
-
 
                                         </View>
                                     </View>
@@ -645,8 +540,7 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }} >
                                     <View
                                         style={{
                                             width: wp("85%"),
@@ -654,10 +548,9 @@ export default function SixtyScreen(){
 
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 130 - 150 runs per 100 balls</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 100 - 120 runs per 100 balls</Text>
                                         </View>
                                         <View
                                             style={{
@@ -687,8 +580,7 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
@@ -696,10 +588,9 @@ export default function SixtyScreen(){
 
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 60 - 70 runs per 100 balls</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 40 - 50 runs per 100 balls</Text>
                                         </View>
                                         <View
                                             style={{
@@ -711,9 +602,6 @@ export default function SixtyScreen(){
                                             }}
                                         >
                                             <Text style={{ fontWeight: "bold", color: "#ff0000" }}>-2 Pts</Text>
-
-
-
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -729,19 +617,18 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
+            
                                     <View
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
-
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
+                                    
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 50 - 59.99 runs per 100 balls</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 30 - 39.99 runs per 100 balls</Text>
                                         </View>
                                         <View
                                             style={{
@@ -750,12 +637,9 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
+                                            }}>
                                             <Text style={{ fontWeight: "bold", color: "#ff0000" }}>-4 Pts</Text>
 
-
-
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -771,19 +655,16 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
-
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Below 50 runs 100 balls</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Below 30 runs per 100 balls</Text>
                                         </View>
                                         <View
                                             style={{
@@ -792,12 +673,8 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
+                                            }}>
                                             <Text style={{ fontWeight: "bold", color: "#ff0000" }}>-6 Pts</Text>
-
-
-
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -813,8 +690,7 @@ export default function SixtyScreen(){
                         display: "flex",
                         justifyContent: "center",
                         paddingTop: 10,
-                    }}
-                >
+                    }}>
                     <Pressable
                         onPress={() => {
                             setBowling(!bowling);
@@ -827,8 +703,7 @@ export default function SixtyScreen(){
                             borderWidth: 1.5,
                             borderRadius: 5,
                             borderColor: "#cccccc",
-                        }}
-                    >
+                        }}>
                         <View
                             style={{
                                 width: wp("92%"),
@@ -836,17 +711,14 @@ export default function SixtyScreen(){
                                 display: "flex",
                                 justifyContent: "space-between",
                                 padding: 10,
-                            }}
-                        >
+                            }} >
                             <Text style={{ fontWeight: "bold" }}>Bowling</Text>
                             <View
-                                style={{ flexDirection: "row", gap: 5, alignItems: "center" }}
-                            >
+                                style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
                                 <Pressable
                                     onPress={() => {
                                         setBowling(!bowling);
-                                    } }
-                                >
+                                    }}>
                                     {bowling ? (
                                         <Entypo name="chevron-small-up" size={24} color="black" />
                                     ) : (
@@ -898,12 +770,8 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
+                                            }}>
                                             <Text style={{ fontWeight: "bold", color: "#00A000" }}>+25 Pts</Text>
-
-
-
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -925,7 +793,6 @@ export default function SixtyScreen(){
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
-
                                             display: "flex",
                                             alignItems: "center",
                                         }}
@@ -943,51 +810,6 @@ export default function SixtyScreen(){
                                             }}
                                         >
                                             <Text style={{ fontWeight: "bold", color: "#00A000" }}>+8 Pts</Text>
-
-
-
-                                        </View>
-                                    </View>
-                                </LinearGradient>
-
-                                <LinearGradient
-                                    style={{
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        width: wp("91%"),
-                                        display: "flex",
-                                        flexDirection: 'column',
-                                        padding: 5
-                                    }}
-                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
-                                    start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
-                                    <View
-                                        style={{
-                                            width: wp("85%"),
-                                            flexDirection: "row",
-
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>3 Wicket Bonus</Text>
-                                        </View>
-                                        <View
-                                            style={{
-                                                width: wp("35%"),
-                                                flexDirection: "row",
-                                                display: "flex",
-                                                justifyContent: "flex-end",
-                                                gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+4 Pts</Text>
-
-
-
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -1024,12 +846,8 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+8 Pts</Text>
-
-
-
+                                            }}>
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+4 Pts</Text>
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -1045,13 +863,11 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }} >
                                     <View
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
-
                                             display: "flex",
                                             alignItems: "center",
                                         }}
@@ -1068,13 +884,11 @@ export default function SixtyScreen(){
                                                 gap: 5,
                                             }}
                                         >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+16 Pts</Text>
-
-
-
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+8 Pts</Text>
                                         </View>
                                     </View>
                                 </LinearGradient>
+
 
                                 <LinearGradient
                                     style={{
@@ -1093,142 +907,11 @@ export default function SixtyScreen(){
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
-
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("50%") }}>
                                             <Text style={{ fontWeight: "bold" }}>Maiden Over</Text>
-                                        </View>
-                                        <View
-                                            style={{
-                                                width: wp("35%"),
-                                                flexDirection: "row",
-                                                display: "flex",
-                                                justifyContent: "flex-end",
-                                                gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+12 Pts</Text>
-
-
-
-                                        </View>
-                                    </View>
-                                </LinearGradient>
-
-                                <LinearGradient
-                                    style={{
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        width: wp("91%"),
-                                        display: "flex",
-                                        flexDirection: 'column',
-                                        padding: 5
-                                    }}
-                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
-                                    start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
-                                    <View
-                                        style={{
-                                            width: wp("85%"),
-                                            flexDirection: "row",
-
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Economy Rate Points</Text>
-                                            <Text style={{ fontSize: 10 }}>(Minimum 2 Overs to be Bowled)</Text>
-                                        </View>
-                                        <View
-                                            style={{
-                                                width: wp("35%"),
-                                                flexDirection: "row",
-                                                display: "flex",
-                                                justifyContent: "flex-end",
-                                                gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#ff0000" }}>-2 Pts</Text>
-
-
-
-                                        </View>
-                                    </View>
-                                </LinearGradient>
-
-
-
-                                <LinearGradient
-                                    style={{
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        width: wp("91%"),
-                                        display: "flex",
-                                        flexDirection: 'column',
-                                        padding: 5
-                                    }}
-                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
-                                    start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
-                                    <View
-                                        style={{
-                                            width: wp("85%"),
-                                            flexDirection: "row",
-
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Below 5 Runs per over</Text>
-                                        </View>
-                                        <View
-                                            style={{
-                                                width: wp("35%"),
-                                                flexDirection: "row",
-                                                display: "flex",
-                                                justifyContent: "flex-end",
-                                                gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+6 Pts</Text>
-
-
-
-                                        </View>
-                                    </View>
-                                </LinearGradient>
-
-                                <LinearGradient
-                                    style={{
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        width: wp("91%"),
-                                        display: "flex",
-                                        flexDirection: 'column',
-                                        padding: 5
-                                    }}
-                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
-                                    start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
-                                    <View
-                                        style={{
-                                            width: wp("85%"),
-                                            flexDirection: "row",
-
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 5 - 5.99 per over</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1264,13 +947,119 @@ export default function SixtyScreen(){
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
+                                            display: "flex",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <View style={{ width: wp("50%") }}>
+                                            <Text style={{ fontWeight: "bold" }}>Economy Rate Points</Text>
+                                            <Text style={{ fontSize: 10 }}>(Min 5 Overs to be Bowled)</Text>
+                                        </View>
+                                    </View>
+                                </LinearGradient>
+
+
+
+                                <LinearGradient
+                                    style={{
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        width: wp("91%"),
+                                        display: "flex",
+                                        flexDirection: 'column',
+                                        padding: 5
+                                    }}
+                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
+                                    start={{ x: 0, y: 0 }}
+                                    end={{ x: 1, y: 0 }}
+                                >
+                                    <View
+                                        style={{
+                                            width: wp("85%"),
+                                            flexDirection: "row",
+                                            display: "flex",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <View style={{ width: wp("50%") }}>
+                                            <Text style={{ fontWeight: "bold" }}>Below 2.5 Runs per over</Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                width: wp("35%"),
+                                                flexDirection: "row",
+                                                display: "flex",
+                                                justifyContent: "flex-end",
+                                                gap: 5,
+                                            }}
+                                        >
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+6 Pts</Text>
+                                        </View>
+                                    </View>
+                                </LinearGradient>
+
+                                <LinearGradient
+                                    style={{
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        width: wp("91%"),
+                                        display: "flex",
+                                        flexDirection: 'column',
+                                        padding: 5
+                                    }}
+                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
+                                    start={{ x: 0, y: 0 }}
+                                    end={{ x: 1, y: 0 }}
+                                >
+                                    <View
+                                        style={{
+                                            width: wp("85%"),
+                                            flexDirection: "row",
+                                            display: "flex",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <View style={{ width: wp("50%") }}>
+                                            <Text style={{ fontWeight: "bold" }}>Between 2.5 - 3.49 per over</Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                width: wp("35%"),
+                                                flexDirection: "row",
+                                                display: "flex",
+                                                justifyContent: "flex-end",
+                                                gap: 5,
+                                            }}
+                                        >
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+4 Pts</Text>
+                                        </View>
+                                    </View>
+                                </LinearGradient>
+
+                                <LinearGradient
+                                    style={{
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        width: wp("91%"),
+                                        display: "flex",
+                                        flexDirection: 'column',
+                                        padding: 5
+                                    }}
+                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
+                                    start={{ x: 0, y: 0 }}
+                                    end={{ x: 1, y: 0 }}
+                                >
+                                    <View
+                                        style={{
+                                            width: wp("85%"),
+                                            flexDirection: "row",
 
                                             display: "flex",
                                             alignItems: "center",
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 6 - 7 per overs</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 3.5 - 4.5 per overs</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1282,9 +1071,6 @@ export default function SixtyScreen(){
                                             }}
                                         >
                                             <Text style={{ fontWeight: "bold", color: "#00A000" }}>+2 Pts</Text>
-
-
-
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -1306,13 +1092,12 @@ export default function SixtyScreen(){
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
-
                                             display: "flex",
                                             alignItems: "center",
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 10 - 11 per over</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 7 - 8 per over</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1321,12 +1106,8 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
+                                            }} >
                                             <Text style={{ fontWeight: "bold", color: "#ff0000" }}>-2 Pts</Text>
-
-
-
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -1348,13 +1129,12 @@ export default function SixtyScreen(){
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
-
                                             display: "flex",
                                             alignItems: "center",
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 11.01 - 12 run per over</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 8.01 - 9 runs per over</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1390,13 +1170,12 @@ export default function SixtyScreen(){
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
-
                                             display: "flex",
                                             alignItems: "center",
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Above 12 runs per over</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Above 9 runs per over</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1442,8 +1221,7 @@ export default function SixtyScreen(){
                             borderWidth: 1.5,
                             borderRadius: 5,
                             borderColor: "#cccccc",
-                        }}
-                    >
+                        }}>
                         <View
                             style={{
                                 width: wp("92%"),
@@ -1460,8 +1238,7 @@ export default function SixtyScreen(){
                                 <Pressable
                                     onPress={() => {
                                         setFielding(!fielding);
-                                    } }
-                                >
+                                    }} >
                                     {fielding ? (
                                         <Entypo name="chevron-small-up" size={24} color="black" />
                                     ) : (
@@ -1479,8 +1256,7 @@ export default function SixtyScreen(){
                                     alignItems: "center",
                                     gap: 15,
                                     paddingBottom: 5,
-                                }}
-                            >
+                                }}>
                                 <LinearGradient
                                     style={{
                                         justifyContent: "center",
@@ -1642,10 +1418,7 @@ export default function SixtyScreen(){
                                             }}
                                         >
                                             <Text style={{ fontWeight: "bold", color: "#00A000" }}>+12 Pts</Text>
-
-
-
-                                        </View>
+                                       </View>
                                     </View>
                                 </LinearGradient>
 
@@ -1666,7 +1439,6 @@ export default function SixtyScreen(){
                                         style={{
                                             width: wp("85%"),
                                             flexDirection: "row",
-
                                             display: "flex",
                                             alignItems: "center",
                                         }}
@@ -1684,15 +1456,9 @@ export default function SixtyScreen(){
                                             }}
                                         >
                                             <Text style={{ fontWeight: "bold", color: "#00A000" }}> +6 Pts</Text>
-
-
-
                                         </View>
                                     </View>
                                 </LinearGradient>
-
-
-
                             </View>
                         )}
                     </Pressable>
@@ -1739,7 +1505,7 @@ export default function SixtyScreen(){
                                 <Pressable
                                     onPress={() => {
                                         setPoints(!points);
-                                    } }
+                                    }}
                                 >
                                     {points ? (
                                         <Entypo name="chevron-small-up" size={24} color="black" />
@@ -1758,8 +1524,7 @@ export default function SixtyScreen(){
                                     alignItems: "center",
                                     gap: 15,
                                     paddingBottom: 5,
-                                }}
-                            >
+                                }} >
                                 <LinearGradient
                                     style={{
                                         justifyContent: "center",
@@ -1771,8 +1536,7 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
@@ -1780,8 +1544,7 @@ export default function SixtyScreen(){
 
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("50%") }}>
                                             <Text style={{ fontWeight: "bold" }}>Captain Points</Text>
                                         </View>
@@ -1792,11 +1555,8 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>2X</Text>
-
-
+                                            }}>
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>2x</Text>
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -1812,8 +1572,7 @@ export default function SixtyScreen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
@@ -1821,8 +1580,7 @@ export default function SixtyScreen(){
 
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("50%") }}>
                                             <Text style={{ fontWeight: "bold" }}>Vice Captain Points </Text>
                                         </View>
@@ -1833,88 +1591,8 @@ export default function SixtyScreen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>1.5X</Text>
-                                        </View>
-                                    </View>
-                                </LinearGradient>
-
-                                <LinearGradient
-                                    style={{
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        width: wp("91%"),
-                                        display: "flex",
-                                        flexDirection: 'column',
-                                        padding: 5
-                                    }}
-                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
-                                    start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
-                                    <View
-                                        style={{
-                                            width: wp("85%"),
-                                            flexDirection: "row",
-
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>In Announced LineUp</Text>
-                                        </View>
-                                        <View
-                                            style={{
-                                                width: wp("35%"),
-                                                flexDirection: "row",
-                                                display: "flex",
-                                                justifyContent: "flex-end",
-                                                gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+4 Pts</Text>
-                                        </View>
-                                    </View>
-                                </LinearGradient>
-
-                                <LinearGradient
-                                    style={{
-                                        paddingBottom: 20,
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        width: wp("91%"),
-                                        display: "flex",
-                                        flexDirection: 'column',
-                                        padding: 5
-                                    }}
-                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
-                                    start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
-                                    <View
-                                        style={{
-                                            width: wp("85%"),
-                                            flexDirection: "row",
-
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Playing Substitute</Text>
-                                        </View>
-                                        <View
-                                            style={{
-                                                width: wp("35%"),
-                                                flexDirection: "row",
-                                                display: "flex",
-                                                justifyContent: "flex-end",
-                                                gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+4 Pts</Text>
+                                            }}>
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>1.5x</Text>
                                         </View>
                                     </View>
                                 </LinearGradient>
@@ -1922,7 +1600,6 @@ export default function SixtyScreen(){
                         )}
                     </Pressable>
                 </View>
-
             </ScrollView>
             </>
     )

@@ -63,7 +63,7 @@ export default function T10Screen(){
                             marginLeft: 10,
                         }}>
 
-<View style={{marginBottom:hp(1)}}>
+                <View style={{marginBottom:hp(1)}}>
                         <LinearGradient style={{borderRadius: 5}}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 1, y: 0 }}
@@ -357,49 +357,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("45%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>30+ Runs</Text>
-                                        </View>
-                                        <View
-                                            style={{
-                                                width: wp("40%"),
-                                                flexDirection: "row",
-                                                display: "flex",
-                                                justifyContent: "flex-end",
-                                                gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+4 Pts</Text>
-
-
-
-                                        </View>
-                                    </View>
-                                </LinearGradient>
-
-                                <LinearGradient
-                                    style={{
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        width: wp("90%"),
-                                        display: "flex",
-                                        flexDirection: 'column',
-                                        padding: 5
-                                    }}
-                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
-                                    start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
-                                    <View
-                                        style={{
-                                            width: wp("85%"),
-                                            flexDirection: "row",
-
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <View style={{ width: wp("45%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Half Century Bonus</Text>
+                                            <Text style={{ fontWeight: "bold" }}>30 Run Bonus</Text>
                                         </View>
                                         <View
                                             style={{
@@ -441,7 +399,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("45%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Century Bonus</Text>
+                                            <Text style={{ fontWeight: "bold" }}>50 Run Bonus</Text>
                                         </View>
                                         <View
                                             style={{
@@ -459,6 +417,7 @@ export default function T10Screen(){
                                         </View>
                                     </View>
                                 </LinearGradient>
+
 
                                 <LinearGradient
                                     style={{
@@ -483,7 +442,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("45%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Dismissed For Duck</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Dismissal For A Duck</Text>
                                         </View>
                                         <View
                                             style={{
@@ -525,8 +484,8 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Strick Rate Points(Except Bowler)</Text>
-                                            <Text style={{ fontSize: hp(1.6) }}>(Minimum 10 Balls to be Played)</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Strick Rate (Except Bowler)Points</Text>
+                                            <Text style={{ fontSize: hp(1.6) }}>(Min 5 Balls to be Played)</Text>
                                         </View>
                                         <View
                                             style={{
@@ -565,7 +524,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Above 170 runs per 100 balls</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Above 190 runs per 100 balls</Text>
                                         </View>
                                         <View
                                             style={{
@@ -607,7 +566,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 150.01 - 170 runs per 100 balls</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 170.01 - 190 runs per 100 balls</Text>
                                         </View>
                                         <View
                                             style={{
@@ -649,7 +608,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 130 - 150 runs per 100 balls</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 150 - 170 runs per 100 balls</Text>
                                         </View>
                                         <View
                                             style={{
@@ -691,7 +650,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 60 - 70 runs per 100 balls</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 70 - 80 runs per 100 balls -2</Text>
                                         </View>
                                         <View
                                             style={{
@@ -733,7 +692,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 50 - 59.99 runs per 100 balls</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 60 - 69.99 runs per 100 balls</Text>
                                         </View>
                                         <View
                                             style={{
@@ -775,7 +734,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("55%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Below 50 runs 100 balls</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Below 60 runs per 100 balls</Text>
                                         </View>
                                         <View
                                             style={{
@@ -965,49 +924,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>3 Wicket Bonus</Text>
-                                        </View>
-                                        <View
-                                            style={{
-                                                width: wp("35%"),
-                                                flexDirection: "row",
-                                                display: "flex",
-                                                justifyContent: "flex-end",
-                                                gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+4 Pts</Text>
-
-
-
-                                        </View>
-                                    </View>
-                                </LinearGradient>
-
-                                <LinearGradient
-                                    style={{
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        width: wp("91%"),
-                                        display: "flex",
-                                        flexDirection: 'column',
-                                        padding: 5
-                                    }}
-                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
-                                    start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
-                                    <View
-                                        style={{
-                                            width: wp("85%"),
-                                            flexDirection: "row",
-
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>4 Wicket Bonus</Text>
+                                            <Text style={{ fontWeight: "bold" }}>2 Wicket Bonus</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1049,7 +966,51 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>5 Wicket Bonus</Text>
+                                            <Text style={{ fontWeight: "bold" }}>3 Wicket Bonus</Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                width: wp("35%"),
+                                                flexDirection: "row",
+                                                display: "flex",
+                                                justifyContent: "flex-end",
+                                                gap: 5,
+                                            }}
+                                        >
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+16 Pts</Text>
+
+
+
+                                        </View>
+                                    </View>
+                                </LinearGradient>
+
+                              
+
+                                <LinearGradient
+                                    style={{
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        width: wp("91%"),
+                                        display: "flex",
+                                        flexDirection: 'column',
+                                        padding: 5
+                                    }}
+                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
+                                    start={{ x: 0, y: 0 }}
+                                    end={{ x: 1, y: 0 }}
+                                >
+                                    <View
+                                        style={{
+                                            width: wp("85%"),
+                                            flexDirection: "row",
+
+                                            display: "flex",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <View style={{ width: wp("50%") }}>
+                                            <Text style={{ fontWeight: "bold" }}>Maiden Over</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1091,65 +1052,10 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Maiden Over</Text>
-                                        </View>
-                                        <View
-                                            style={{
-                                                width: wp("35%"),
-                                                flexDirection: "row",
-                                                display: "flex",
-                                                justifyContent: "flex-end",
-                                                gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+12 Pts</Text>
-
-
-
-                                        </View>
-                                    </View>
-                                </LinearGradient>
-
-                                <LinearGradient
-                                    style={{
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        width: wp("91%"),
-                                        display: "flex",
-                                        flexDirection: 'column',
-                                        padding: 5
-                                    }}
-                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
-                                    start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
-                                    <View
-                                        style={{
-                                            width: wp("85%"),
-                                            flexDirection: "row",
-
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <View style={{ width: wp("50%") }}>
                                             <Text style={{ fontWeight: "bold" }}>Economy Rate Points</Text>
-                                            <Text style={{ fontSize: 10 }}>(Minimum 2 Overs to be Bowled)</Text>
+                                            <Text style={{ fontSize: 10 }}>(Min 1 Overs to be Bowled)</Text>
                                         </View>
-                                        <View
-                                            style={{
-                                                width: wp("35%"),
-                                                flexDirection: "row",
-                                                display: "flex",
-                                                justifyContent: "flex-end",
-                                                gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#ff0000" }}>-2 Pts</Text>
-
-
-
-                                        </View>
+                                       
                                     </View>
                                 </LinearGradient>
 
@@ -1178,7 +1084,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Below 5 Runs per over</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Below 7 Runs per over</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1220,49 +1126,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 5 - 5.99 per over</Text>
-                                        </View>
-                                        <View
-                                            style={{
-                                                width: wp("35%"),
-                                                flexDirection: "row",
-                                                display: "flex",
-                                                justifyContent: "flex-end",
-                                                gap: 5,
-                                            }}
-                                        >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+4 Pts</Text>
-
-
-
-                                        </View>
-                                    </View>
-                                </LinearGradient>
-
-                                <LinearGradient
-                                    style={{
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        width: wp("91%"),
-                                        display: "flex",
-                                        flexDirection: 'column',
-                                        padding: 5
-                                    }}
-                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
-                                    start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
-                                    <View
-                                        style={{
-                                            width: wp("85%"),
-                                            flexDirection: "row",
-
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 6 - 7 per overs</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 7 - 7.99 runs per over</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1304,7 +1168,49 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 10 - 11 per over</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 8 - 9 runs per overs</Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                width: wp("35%"),
+                                                flexDirection: "row",
+                                                display: "flex",
+                                                justifyContent: "flex-end",
+                                                gap: 5,
+                                            }}
+                                        >
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+2 Pts</Text>
+
+
+
+                                        </View>
+                                    </View>
+                                </LinearGradient>
+
+                                <LinearGradient
+                                    style={{
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        width: wp("91%"),
+                                        display: "flex",
+                                        flexDirection: 'column',
+                                        padding: 5
+                                    }}
+                                    colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
+                                    start={{ x: 0, y: 0 }}
+                                    end={{ x: 1, y: 0 }}
+                                >
+                                    <View
+                                        style={{
+                                            width: wp("85%"),
+                                            flexDirection: "row",
+
+                                            display: "flex",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <View style={{ width: wp("50%") }}>
+                                            <Text style={{ fontWeight: "bold" }}>Between 14 - 15 runs per over</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1346,7 +1252,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Between 11.01 - 12 run per over</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Between 15.01 - 16 run per over</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1388,7 +1294,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Above 12 runs per over</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Above 16 runs per over</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1664,7 +1570,7 @@ export default function T10Screen(){
                                         }}
                                     >
                                         <View style={{ width: wp("50%") }}>
-                                            <Text style={{ fontWeight: "bold" }}>Run out (Not a direct hit)</Text>
+                                            <Text style={{ fontWeight: "bold" }}>Run out (Not a Direct hit)</Text>
                                         </View>
                                         <View
                                             style={{
@@ -1675,7 +1581,7 @@ export default function T10Screen(){
                                                 gap: 5,
                                             }}
                                         >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}> +6 Pts</Text>
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>+6 Pts</Text>
 
 
 
@@ -1786,7 +1692,7 @@ export default function T10Screen(){
                                                 gap: 5,
                                             }}
                                         >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>2X</Text>
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>2x</Text>
 
 
                                         </View>
@@ -1827,7 +1733,7 @@ export default function T10Screen(){
                                                 gap: 5,
                                             }}
                                         >
-                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>1.5X</Text>
+                                            <Text style={{ fontWeight: "bold", color: "#00A000" }}>1.5x</Text>
                                         </View>
                                     </View>
                                 </LinearGradient>
