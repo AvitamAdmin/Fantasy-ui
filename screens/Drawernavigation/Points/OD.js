@@ -495,7 +495,7 @@ export default function ODScreen(){
         >
           <View style={{ width: wp("55%" )}}>
             <Text style={{ fontWeight: "bold" }}>Strick Rate (Except Bowler) Points</Text>
-            <Text style={{fontSize: hp(1.6)}}>(Min 20 Balls to be Played)</Text>
+            <Text style={{fontSize: hp(1.2)}}>(Min 20 Balls to be Played)</Text>
           </View>
           <View
             style={{

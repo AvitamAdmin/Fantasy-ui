@@ -485,7 +485,7 @@ export default function T10Screen(){
                                     >
                                         <View style={{ width: wp("55%") }}>
                                             <Text style={{ fontWeight: "bold" }}>Strick Rate (Except Bowler)Points</Text>
-                                            <Text style={{ fontSize: hp(1.6) }}>(Min 5 Balls to be Played)</Text>
+                                            <Text style={{ fontSize: hp(1.2) }}>(Min 5 Balls to be Played)</Text>
                                         </View>
                                         <View
                                             style={{
