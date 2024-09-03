@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, Text, View ,Dimensions} from 'react-native'
 import React, { useState } from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
@@ -10,9 +10,13 @@ const ContestHeader = () => {
   const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
 
+  const screenWidth = Dimensions.get('window').width;
+  const isTablet = screenWidth >= 768;
+
   return (
-    <View style={styles.header}>
-      <View style={styles.textContainer}>
+    <View style={{ width:wp('100%')}}>
+    <View style={[styles.header , { width: isTablet ? wp('75%') : wp('50%') }]}>
+      <View style={[styles.textContainer, { width: isTablet ? wp('75%') : wp('50%') }]}>
         <Text style={styles.mainText}>CSK vs RCB</Text>
         <Text style={styles.subText}>21M 30s left</Text>
       </View>
@@ -33,6 +37,7 @@ const ContestHeader = () => {
       </View>
       <CreateContestPopup visible={modalVisible} onClose={() => setModalVisible(false)} />
     </View>
+    </View>
   );
 }
 
@@ -42,19 +47,19 @@ const styles = StyleSheet.create({
   header: {
     display: "flex",
     flexDirection: 'row',
-    width: wp("100%"),
     padding: 5,
-    justifyContent: 'space-evenly',
+    justifyContent:'space-between',
+    
   },
   textContainer: {
     display: "flex",
     flexDirection: 'column',
-    width: wp("55%"),
   },
   mainText: {
     fontWeight: "bold",
     color: '#fff',
     fontSize: hp(2.1),
+    
   },
   subText: {
     fontSize:  hp(1.5),
@@ -64,7 +69,7 @@ const styles = StyleSheet.create({
   iconContainer: {
     display: "flex",
     flexDirection: "row",
-    width: wp("60%"),
+    width: wp("20%"),
     justifyContent: "flex-start",
     alignItems: "center",
     gap: 8,

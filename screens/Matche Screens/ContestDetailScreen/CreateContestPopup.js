@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal, Pressable, Text, View, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const CreateContestPopup = ({ visible, onClose  }) => {
   const navigation = useNavigation();
@@ -18,7 +19,7 @@ const CreateContestPopup = ({ visible, onClose  }) => {
             <View style={styles.modalContainer}>
               <View style={{ paddingTop: 20 }}>
                 <View style={styles.inputContainer}>
-                  <View style={{ width: '50%' }}>
+                  <View style={{ width: wp('50%') }}>
                     <Text style={styles.inputLabel}>Enter Contest Code</Text>
                   </View>
                   <View style={styles.joinButtonContainer}>
@@ -31,7 +32,7 @@ const CreateContestPopup = ({ visible, onClose  }) => {
 
               <View style={styles.createContestContainer}>
                 <View style={styles.createContestButton}>
-                  <View style={{ width: '13%' }}>
+                  <View style={{ width: wp('5%') }}>
                     <Feather name="plus-circle" size={24} color="white" />
                   </View>
                   <View>
@@ -65,12 +66,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   modalContainer: {
-    width: '100%',
+    width: wp('100%'),
     backgroundColor: 'white',
     padding: 20,
   },
   inputContainer: {
-    width: '100%',
+    width: wp('95%'),
     justifyContent: 'space-between',
     alignItems: 'center',
     display: 'flex',
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
     color: '#4D4D4D'
   },
   joinButtonContainer: {
-    width: '40%',
+    width: wp('30%'),
     backgroundColor: '#3E57C4',
     borderRadius: 7,
   },
@@ -96,13 +97,13 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   createContestContainer: {
-    width: '100%',
+    width: wp('95%'),
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 15,
   },
   createContestButton: {
-    width: '100%',
+    width: wp('95%'),
     justifyContent: 'center',
     alignItems: 'center',
     display: 'flex',

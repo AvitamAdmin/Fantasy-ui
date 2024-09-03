@@ -22,8 +22,6 @@ const ContestLeaderScreen = () => {
         </View>
 
 
-
-
         <View 
         style={{gap:5}}
         >
@@ -48,7 +46,7 @@ const ContestLeaderScreen = () => {
             />
           </View>
           <View>
-            <Text>Super Kings </Text>
+            <Text style={{ fontSize: hp(1.5)}}>Super Kings </Text>
           </View>
           <View
             style={{ padding: 2, borderRadius: 5, backgroundColor: "#ebebeb" }}
@@ -77,7 +75,7 @@ const ContestLeaderScreen = () => {
         />
       </View>
           <View>
-            <Text style={{ fontSize: hp(2)}}>Super Kings </Text>
+            <Text style={{ fontSize: hp(1.5)}}>Super Kings </Text>
           </View>
           <View
             style={{ padding: 2, borderRadius: 5, backgroundColor: "#ebebeb" }}
