@@ -1,7 +1,5 @@
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
+import { Image, Pressable, StyleSheet, Text, View,ScrollView, Dimensions } from 'react-native'
 import React from 'react'
-
-import { useNavigation } from "@react-navigation/native";
 import { Octicons } from "@expo/vector-icons";
 import { FontAwesome6 } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
@@ -9,20 +7,36 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 
 const MyTeam = () => {
-  const navigation = useNavigation()
-  return (
-    <View style={{padding:10,backgroundColor:"#fff",height: hp("100%")}}>
-       <View style={{ display:"flex",
-        flexDirection:"column",gap:15,elevation:10}}>
-<View style={{ display: "flex", width: wp("95%"), flexDirection: "column", }}>
+
+  const screenWidth = Dimensions.get('window').width;
+
+  const isTablet = screenWidth >= 768;
+  return ( 
+      <View
+      style={{
+        display: "flex",
+        width: wp("100%"),
+        flexDirection: "column",
+        height: hp("100%"),
+        backgroundColor: "#fff",
+      }}>
+        
+      <ScrollView style={{
+        display:"flex",
+        flexDirection:"column",
+        padding: 10,
+      }}>
+      <View style={{ display:"flex",flexDirection:"column",gap:15,}}>
+      
+      <View style={{ display: "flex", width: wp("100%"), flexDirection: "column", }}>
         <View
           style={{
-            width: wp("95%"),
+            width: wp("100%"),
             backgroundColor: "#979797",
             borderWidth: 2,
             borderColor: "#fff",
-            height: hp(32),
-            borderRadius: 8,
+            height: isTablet ? 250 : 220,
+            borderRadius: 10,
             position: "relative",
             elevation: 10,
           }}
@@ -30,8 +44,8 @@ const MyTeam = () => {
           <Image
             source={require("../../../../assets/CreateTeamPreview.png")}
             style={{
-              width: wp("95%"),
-              height: hp(32),
+              width: wp("100%"),
+              height: hp("33%"),
               borderRadius: 8,
               opacity: 0.9,
             }}
@@ -42,7 +56,7 @@ const MyTeam = () => {
             position: "absolute",
             top: 0,
             display: "flex",
-            width: wp("96%"),
+            width: wp("95%"),
             flexDirection: "column",
             padding: 1,
             justifyContent: "center",
@@ -53,7 +67,7 @@ const MyTeam = () => {
           <View
             style={{
               display: "flex",
-              width: wp("95%"),
+              width: isTablet ? wp('100%') : wp('96%'),
               flexDirection: "row",
               padding: 10,
               justifyContent: "space-between",
@@ -65,21 +79,21 @@ const MyTeam = () => {
             <View
               style={{
                 display: "flex",
-                width: wp("20%"),
+                width: isTablet ? wp('20%') : wp('26%'),
                 flexDirection: "row",
-                justifyContent: "space-between",
+                justifyContent: "space-evenly",
                 alignItems: "center",
               }}
             >
               <Text style={{ fontWeight: "bold", color: "#fff" }}>
                 Shivam11’s
               </Text>
-              <Text style={{ fontWeight: "bold", color: "#fff" }}>(T1)</Text>
+              <Text style={{ fontWeight: "bold", color: "#fff" }}>T1</Text>
             </View>
             <View
               style={{
                 display: "flex",
-                width: wp("25%"),
+                width: wp("30%"),
                 flexDirection: "row",
                 justifyContent: "space-between",
                 alignItems: "center",
@@ -100,7 +114,7 @@ const MyTeam = () => {
           <View
             style={{
               display: "flex",
-              width: wp("100%"),
+              width: isTablet ? wp('90%') : wp('95%'),
               flexDirection: "row",
               padding: 5,
             }}
@@ -108,7 +122,7 @@ const MyTeam = () => {
             <View
               style={{
                 display: "flex",
-                width: wp("62%"),
+                width: wp("60%"),
                 flexDirection: "column",
                 justifyContent: "space-between",
                 alignItems: "center",
@@ -117,7 +131,7 @@ const MyTeam = () => {
               <View
                 style={{
                   display: "flex",
-                  width: wp("60%"),
+                  width: wp("65%"),
                   flexDirection: "row",
                   justifyContent: "space-around",
                   alignItems: "center",
@@ -134,7 +148,8 @@ const MyTeam = () => {
                 >
                   <Image
                     source={require("../../../../assets/MS Dhoni.png")}
-                    style={{ width: 85, height: 85 }}
+                    style={{ height: isTablet ? 100 : 85, 
+                      width: isTablet ? 100 : 85  }}
                   />
                   <View
                     style={{
@@ -152,26 +167,27 @@ const MyTeam = () => {
                     </Text>
                   </View>
                   <View
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      backgroundColor: "#000",
-                      borderRadius: 20,
-                      paddingLeft: 8,
-                      paddingRight: 8,
-                      justifyContent: "flex-start",
-                      alignItems: "flex-start",
-                      left: 0,
-                      padding: 2,
-                    }}
-                  >
+                    style={[    
+                    {
+                        position: "absolute",
+                        top: 0,
+                        backgroundColor: "#000",
+                        borderRadius: 20,
+                        paddingLeft: 5,
+                        paddingRight: 5,
+                        justifyContent: "flex-start",
+                        alignItems: "flex-start",
+                        padding: 2,
+                    },
+                    isTablet ? { right: 80 } : { left: 0 } // Conditional styling
+                  ]}>
+
                     <Text
                       style={{
                         fontWeight: "bold",
                         color: "#fff",
                         fontSize: hp(2),
-                      }}
-                    >
+                      }}>
                       C
                     </Text>
                   </View>
@@ -187,29 +203,31 @@ const MyTeam = () => {
                 >
                   <Image
                     source={require("../../../../assets/MS Dhoni.png")}
-                    style={{ width: 85, height: 85 }}
+                    style={{ height: isTablet ? 100 : 85, 
+                      width: isTablet ? 100 : 85  }}
                   />
                   <View
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      backgroundColor: "#000",
-                      borderRadius: 20,
-                      paddingLeft: 5,
-                      paddingRight: 5,
-                      justifyContent: "flex-start",
-                      alignItems: "flex-start",
-                      left: 0,
-                      padding: 2,
-                    }}
-                  >
+                    style={[    
+                    {
+                        position: "absolute",
+                        top: 0,
+                        backgroundColor: "#000",
+                        borderRadius: 20,
+                        paddingLeft: 5,
+                        paddingRight: 5,
+                        justifyContent: "flex-start",
+                        alignItems: "flex-start",
+                        padding: 2,
+                    },
+                    isTablet ? { right: 80 } : { left: 0 } // Conditional styling
+                  ]}>
+
                     <Text
                       style={{
                         fontWeight: "bold",
                         color: "#fff",
-                        fontSize: hp(1.8),
-                      }}
-                    >
+                        fontSize: hp(1.8)
+                      }}>
                       VC
                     </Text>
                   </View>
@@ -235,7 +253,7 @@ const MyTeam = () => {
             </View>
             <View  style={{
               display: "flex",
-              width: wp("40%"),
+              width: wp("35%"),
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
@@ -247,13 +265,13 @@ const MyTeam = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 position: "relative",
-                width: wp("22%")
-
+                width: wp("21%")
               }}
             >
               <Image
                 source={require("../../../../assets/MS Dhoni.png")}
-                style={{ width: 85, height: 85 }}
+                style={{ height: isTablet ? 100 : 85, 
+                  width: isTablet ? 100 : 85  }}
                 />
               <View
                 style={{
@@ -261,24 +279,24 @@ const MyTeam = () => {
                   top: 0,
                   backgroundColor: "#000",
                   borderRadius: 20,
-                  paddingLeft: 5,
-                  paddingRight: 5,
+                  paddingLeft: 3,
+                  paddingRight: 3,
                   justifyContent: "flex-start",
                   alignItems: "flex-start",
-                  left: 0,
-                  padding: 2,
+                  left: isTablet ? 30 : 0,
+                  padding:3
                 }}
               >
                 <Image
                   source={require("../../../../assets/ImpactPreviewNotSelected.png")}
-                  style={{ width: 20, height: 20 }}
+                  style={{ width: 22, height: 23 }}
                 />
               </View>
               <View
                 style={{
                   position: "absolute",
                   bottom: 0,
-                  width: wp("22%"),
+                  width: wp("20%"),
                   backgroundColor: "#fff",
                   borderRadius: 8,
                   justifyContent: "center",
@@ -304,7 +322,7 @@ const MyTeam = () => {
           <View
                 style={{
                   display: "flex",
-                  width: wp("35%"),
+                  width:  wp("35%"),
                   flexDirection: "row",
                   justifyContent: "space-around",
                   alignItems: "center",
@@ -313,8 +331,8 @@ const MyTeam = () => {
                   borderRadius: 5,
                 }}
               >
-                <Text style={{ fontWeight: "bold", color: "#fff" }}>CSK</Text>
-                <Text style={{ fontWeight: "bold", color: "#fff" }}>7</Text>
+                <Text style={{ fontWeight: "bold", color: "#fff", fontSize:hp(1.6) }}>CSK</Text>
+                <Text style={{ fontWeight: "bold", color: "#fff", fontSize:hp(1.6) }}>7</Text>
               </View>
               <View
                 style={{
@@ -328,8 +346,8 @@ const MyTeam = () => {
                   borderRadius: 5,
                 }}
               >
-                <Text style={{ fontWeight: "bold", color: "#fff" }}>RCB</Text>
-                <Text style={{ fontWeight: "bold", color: "#fff" }}>4</Text>
+                <Text style={{ fontWeight: "bold", color: "#fff", fontSize:hp(1.6) }}>RCB</Text>
+                <Text style={{ fontWeight: "bold", color: "#fff", fontSize:hp(1.6) }}>4</Text>
               </View>
           </View>
 
@@ -342,20 +360,40 @@ const MyTeam = () => {
               alignItems: "center",
             }}
           >
-            <Text style={{ fontWeight: "bold", color: "#fff" }}>WK 2</Text>
-            <Text style={{ fontWeight: "bold", color: "#fff" }}>BAT 2</Text>
-            <Text style={{ fontWeight: "bold", color: "#fff" }}>AR 2</Text>
-            <Text style={{ fontWeight: "bold", color: "#fff" }}>BOWL 2</Text>
+            <Text style={{ fontWeight: "bold", color: "#fff", fontSize:hp(1.6) }}>WK  2</Text>
+            <Text style={{ fontWeight: "bold", color: "#fff", fontSize:hp(1.6) }}>BAT  2</Text>
+            <Text style={{ fontWeight: "bold", color: "#fff" , fontSize:hp(1.6)}}>AR  2</Text>
+            <Text style={{ fontWeight: "bold", color: "#fff" , fontSize:hp(1.6)}}>BOWL  2</Text>
           </View>
+
+         
         </View>
       </View>
 
-      
+      <View style={{
+              display: "flex",
+              width: wp('100%'),
+              flexDirection: "row",
+              padding: 10,
+              justifyContent: "center",
+              backgroundColor: "#0101013d",
+              borderBottomLeftRadius: 10,
+              borderBottomRightRadius: 10,
+            }}>
+            <Text style={{ color:'#fff', fontWeight:'bold', fontSize: hp(1.7)}}>
+              POINTS : 309
+            </Text>
+          </View>
       </View>
-    </View>
+      
+      </ScrollView>
+
+      </View>
+
+    
+
   )
 }
 
 export default MyTeam
 
-const styles = StyleSheet.create({})

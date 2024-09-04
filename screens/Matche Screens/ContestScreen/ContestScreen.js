@@ -671,7 +671,7 @@ const Contest = () => {
             <Text style={{ fontWeight: "400", color: "#fff", fontSize: hp(2) }}>
               MY CONTESTS
             </Text>
-            <Text style={{ fontWeight: "600", color: "#fff" }}>(1)</Text>
+            <Text style={{ fontWeight: "600", color: "#fff", fontSize: hp(2) }}>(1)</Text>
           </Pressable>
         </View>
         <View style={{ width: wp("43%")}}>
@@ -699,7 +699,7 @@ const Contest = () => {
             <Text style={{ fontWeight: "400", color: "#fff", fontSize: hp(2) }}>
               MY TEAM
             </Text>
-            <Text style={{ fontWeight: "600", color: "#fff" }}>(1)</Text>
+            <Text style={{ fontWeight: "600", color: "#fff", fontSize: hp(2) }}>(1)</Text>
           </Pressable>
         </View>
       </View>

@@ -1,4 +1,4 @@
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Pressable, ScrollView, StyleSheet, Text, View, Dimensions } from 'react-native'
 import React from 'react'
 import { Octicons,MaterialCommunityIcons,Ionicons,AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
@@ -7,22 +7,37 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 const MyContests = ({setShow,show}) => {
   const navigation = useNavigation();
+
+  const screenWidth = Dimensions.get('window').width;
+
+  // Determine if the device is a tablet or mobile
+  const isTablet = screenWidth >= 768
   return (
     <ScrollView style={{width: wp("100%"),padding:10,flexDirection:"column"}}>
       
     <View style={{width: wp("95%"),display:"flex",flexDirection:"row",justifyContent:"flex-end",gap:10}}>
-    <Pressable style={{width: wp("30%"),display:"flex",flexDirection:"row",justifyContent:"center",gap:10,borderRadius:20,borderWidth:1,opacity:0.7,alignItems:"center",alignContent:"center",height:hp(4.5)}}>
+    <Pressable style={{width: wp("30%"),
+      display:"flex",
+      flexDirection:"row",
+      justifyContent:"center",
+      gap:10,
+      borderRadius:30,
+      borderWidth:1,
+      opacity:0.7,
+      alignItems:"center",
+      alignContent:"center",
+      height: isTablet ? hp(4) : hp(4.5),}}>
     <View>
-     <Octicons name="filter" size={18} color="black" />
+     <Octicons name="filter" size={23} color="black" />
      </View>
      <View>
-        <Text>In Winning Zone</Text>
+        <Text style={{fontSize: hp(1.7)}}>In Winning Zone</Text>
      </View>
      </Pressable>
 
     </View>
 
-    <View style={{width: wp('95%'),flexDirection:"column",display:"flex",justifyContent:"center",alignItems:"center",paddingTop:10}}>
+    <View style={{width: wp('97%'),flexDirection:"column",display:"flex",justifyContent:"center",alignItems:"center",paddingTop:10}}>
     <View style={{width: wp("95%"),display:"flex",flexDirection:"column",justifyContent:"center",gap:10,borderWidth:1,borderRadius:10,borderColor:"#BCBCBC"}}>
 
 <Pressable onPress={()=> setShow(true)} style={{flexDirection:"column",gap:5,padding:10}}>
