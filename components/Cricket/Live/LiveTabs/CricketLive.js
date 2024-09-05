@@ -1,4 +1,4 @@
-import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Image, Pressable, ScrollView, StyleSheet, Text, View,Dimensions } from 'react-native'
 import React, { useState } from 'react'
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons,FontAwesome5,MaterialCommunityIcons } from '@expo/vector-icons';
@@ -67,6 +67,10 @@ const CricketLive = () => {
         );
       }
 
+      const screenWidth = Dimensions.get('window').width;
+
+      const isTablet = screenWidth >= 768;
+
       const [show, setShow] = useState(false);
       const navigation = useNavigation();
       const handleBackPress = () => {
@@ -80,14 +84,13 @@ const CricketLive = () => {
 
   return (
     <View style={{height: hp(120),width: wp("100%")}}>
-        <View style={{height:wp("40%"),backgroundColor:"#126",width: wp("100%")}}>
+        <View style={{height: isTablet ? hp("30%") : hp("40%"),backgroundColor:"#126",width: wp("100%")}}>
         <LinearGradient
           style={{
             flex: 1,
-
           }}
-          colors={["#3247A0", "#1B2656", "#020202"]}
-        >
+          colors={["#3247A0", "#1B2656", "#020202"]}>
+
        <View style={{display:"flex",width: wp("100%"),flexDirection:"column",gap:20,justifyContent:"space-between",alignItems:"center"}}>
        <View style={{width:wp("95%"),flexDirection:"row",display:"flex",paddingTop:45,justifyContent:"space-between",alignItems:"center"}}>
            <View style={{flexDirection:"row",gap:5,alignItems:"center"}}>
@@ -152,8 +155,8 @@ const CricketLive = () => {
                 <Text style={{color:'#fff',fontWeight:"bold"}}>6(13)</Text>
               </View>
               <ScrollView horizontal  
-showsHorizontalScrollIndicator={false}
-               style={{display:"flex",flexDirection:"row",gap:5,width:wp("20%"),display:"flex"}}>
+                showsHorizontalScrollIndicator={false}
+                style={{display:"flex",flexDirection:"row",gap:5,width:wp("20%"),display:"flex"}}>
              
               <View style={{display:"flex",flexDirection:"row",gap:5,width: wp("100%")}}>
               <MaterialCommunityIcons name="numeric-1-circle-outline" size={24} color="#fff" />

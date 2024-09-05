@@ -35,7 +35,7 @@ const MyTeam = () => {
             backgroundColor: "#979797",
             borderWidth: 2,
             borderColor: "#fff",
-            height: isTablet ? 250 : 220,
+            height: isTablet ? 250 : 250,
             borderRadius: 10,
             position: "relative",
             elevation: 10,
@@ -45,7 +45,7 @@ const MyTeam = () => {
             source={require("../../../../assets/CreateTeamPreview.png")}
             style={{
               width: wp("100%"),
-              height: hp("33%"),
+              height: hp("38%"),
               borderRadius: 8,
               opacity: 0.9,
             }}
@@ -366,11 +366,7 @@ const MyTeam = () => {
             <Text style={{ fontWeight: "bold", color: "#fff" , fontSize:hp(1.6)}}>BOWL  2</Text>
           </View>
 
-         
-        </View>
-      </View>
-
-      <View style={{
+          <View style={{
               display: "flex",
               width: wp('100%'),
               flexDirection: "row",
@@ -384,6 +380,10 @@ const MyTeam = () => {
               POINTS : 309
             </Text>
           </View>
+        </View>
+      </View>
+
+     
       </View>
       
       </ScrollView>

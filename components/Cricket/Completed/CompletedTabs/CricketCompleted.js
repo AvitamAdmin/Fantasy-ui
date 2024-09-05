@@ -1,10 +1,10 @@
-import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Image, Pressable, Dimensions, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import { LinearGradient } from 'expo-linear-gradient';
-import { Ionicons,FontAwesome5,MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons,FontAwesome5 } from '@expo/vector-icons';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 
 import MyContests from './MyContests';
@@ -67,6 +67,10 @@ const CricketCompleted = () => {
         );
       }
 
+      const screenWidth = Dimensions.get('window').width;
+
+      const isTablet = screenWidth >= 768;
+
       const [show, setShow] = useState(false);
       const navigation = useNavigation();
       const handleBackPress = () => {
@@ -80,7 +84,7 @@ const CricketCompleted = () => {
 
   return (
     <View style={{height: hp(120),width: wp("100%")}}>
-        <View style={{height: hp("27%"),backgroundColor:"#126",width: wp("100%")}}>
+        <View style={{height: hp("22%"),backgroundColor:"#126",width: wp("100%")}}>
         <LinearGradient
           style={{
             flex: 1,
