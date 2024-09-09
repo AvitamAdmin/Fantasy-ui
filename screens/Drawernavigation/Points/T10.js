@@ -494,8 +494,7 @@ export default function T10Screen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
+                                            }}>
 
                                         </View>
                                     </View>
@@ -512,8 +511,7 @@ export default function T10Screen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
@@ -521,8 +519,8 @@ export default function T10Screen(){
 
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
+
                                         <View style={{ width: wp("55%") }}>
                                             <Text style={{ fontWeight: "bold" }}>Above 190 runs per 100 balls</Text>
                                         </View>
@@ -533,8 +531,8 @@ export default function T10Screen(){
                                                 display: "flex",
                                                 justifyContent: "flex-end",
                                                 gap: 5,
-                                            }}
-                                        >
+                                            }}>
+
                                             <Text style={{ fontWeight: "bold", color: "#00A000" }}>+6 Pts</Text>
 
 
@@ -554,8 +552,7 @@ export default function T10Screen(){
                                     }}
                                     colors={["#eaeaea", "#e7e7e7", "#f3f3f3", "#fff"]}
                                     start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                >
+                                    end={{ x: 1, y: 0 }}>
                                     <View
                                         style={{
                                             width: wp("85%"),
@@ -563,8 +560,7 @@ export default function T10Screen(){
 
                                             display: "flex",
                                             alignItems: "center",
-                                        }}
-                                    >
+                                        }}>
                                         <View style={{ width: wp("55%") }}>
                                             <Text style={{ fontWeight: "bold" }}>Between 170.01 - 190 runs per 100 balls</Text>
                                         </View>

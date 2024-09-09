@@ -243,7 +243,7 @@ const CricketLiveMatches = () => {
 
 
                 <View style={{width: wp("20%")}}>
-                  <Text style={{color:"#35B267",backgroundColor:"#e0f7ca",width: wp("10%")}}>  ₹ 1000</Text>
+                  <Text style={{color:"#35B267",backgroundColor:"#e0f7ca",width: wp("20%")}}> ₹ 1000</Text>
                 </View>
                
               </View>

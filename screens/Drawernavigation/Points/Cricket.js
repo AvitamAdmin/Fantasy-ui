@@ -127,21 +127,21 @@ import SixtyScreen from "./Sixty";
     
     <Pressable onPress={handleOD}
           style={[ styles.pressable1,
-        { backgroundColor: OD ? '#3E57C4' : 'transparent' } // Background color changes based on T20 state
+        { backgroundColor: OD ? '#3E57C4' : 'transparent' } 
         ]} >
       <Text style={[{ color: OD ? 'white' : 'black' }]}>OD</Text>
     </Pressable>
 
     <Pressable onPress={handleTest}
           style={[ styles.pressable1,
-        { backgroundColor: Test ? '#3E57C4' : 'transparent' } // Background color changes based on T20 state
+        { backgroundColor: Test ? '#3E57C4' : 'transparent' } 
         ]} >
       <Text style={[{ color: Test ? 'white' : 'black' }]}>Test</Text>
     </Pressable>
 
     <Pressable onPress={handleT10}
           style={[ styles.pressable1,
-        { backgroundColor: T10 ? '#3E57C4' : 'transparent' } // Background color changes based on T20 state
+        { backgroundColor: T10 ? '#3E57C4' : 'transparent' } 
         ]} >
       <Text style={[{ color: T10 ? 'white' : 'black' }]}>T10</Text>
     </Pressable>
@@ -161,8 +161,6 @@ import SixtyScreen from "./Sixty";
     </Pressable>  
                
                </View>
-   
-      
                   {
                     T20 && <>
                                <View style={{width: wp("94%"),display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
@@ -176,16 +174,14 @@ import SixtyScreen from "./Sixty";
             }}
             colors={["#3951B5", "#2D3F8F", "#1F2B61"]}
             start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
-          >
+            end={{ x: 1, y: 0 }}>
             <Text
               style={{
                 color: "#fff",
                 fontWeight: "bold",
                 textAlign: "center",
                 paddingBottom: 10,
-              }}
-            >
+              }}>
               IMPORTANT FANTASY POINTS
             </Text>
             <View
@@ -195,8 +191,7 @@ import SixtyScreen from "./Sixty";
                 borderRadius: 10,
                 backgroundColor: "#fff",
                 justifyContent: "flex-end",
-              }}
-            >
+              }}>
               <Image
                 source={require("../../../assets/ImportantFantasyPoints 1.png")}
                 style={{
@@ -272,8 +267,7 @@ import SixtyScreen from "./Sixty";
                     flexDirection: "row",
                     justifyContent: "space-between",
                     marginVertical: 5,
-                  }}
-                >
+                  }}>
                   <Text
                     style={{
                       fontWeight: "bold",
@@ -285,22 +279,17 @@ import SixtyScreen from "./Sixty";
                       color: "#00A000",
                       fontWeight: "bold",
                     }}>+8 Pts </Text>
-                    
-                  
+                                   
                 </View>
                 </LinearGradient>
-                </View>
-
-                
+                </View>           
               </View>
             </View>
           </LinearGradient>
       </View>
       
         <ScrollView style={{width: wp("95%"),height: hp("100%"),flexDirection: "column",
-          display: "flex",paddingBottom:10,padding:5
-        
-        }}>
+          display: "flex",paddingBottom:10,padding:5 }}>
         
         <View
         style={{
@@ -308,8 +297,7 @@ import SixtyScreen from "./Sixty";
           flexDirection: "column",
           display: "flex",
           justifyContent: "center",
-          paddingTop: 10,
-          
+          paddingTop: 10,     
         }}
       >
         <Pressable
@@ -323,10 +311,9 @@ import SixtyScreen from "./Sixty";
             justifyContent: "center",
             borderWidth: 1.5,
             borderRadius: 5,
-            borderColor: "#cccccc",
-            
-          }}
-        >
+            borderColor: "#cccccc",        
+          }}>
+
           <View
             style={{
               width:  wp("92%"),
@@ -334,13 +321,11 @@ import SixtyScreen from "./Sixty";
               display: "flex",
               justifyContent: "space-between",
               padding: 10,
-            
-            }}
-          >
+            }}>
+
             <Text style={{ fontWeight: "bold" }}>Batting</Text>
             <View
-              style={{ flexDirection: "row", gap: 5, alignItems: "center" }}
-            >
+              style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
               <Pressable
                 onPress={() => {
                   setDrop(!Drop);
@@ -398,12 +383,9 @@ import SixtyScreen from "./Sixty";
                     display: "flex",
                     justifyContent: "flex-end",
                     gap: 5,
-                  }}
-                >
+                  }}>
                   <Text style={{ fontWeight: "bold", color: "#00A000" }}>+1 Pts</Text>
-                   
-                    
-                  
+ 
                 </View>
               </View>
           </LinearGradient>
@@ -442,9 +424,7 @@ import SixtyScreen from "./Sixty";
                   gap: 5,
                 }}
               >
-                <Text style={{ fontWeight: "bold", color: "#00A000" }}>+1 Pts</Text>
-                 
-                  
+                <Text style={{ fontWeight: "bold", color: "#00A000" }}>+1 Pts</Text>              
                 
               </View>
             </View>
@@ -568,8 +548,7 @@ import SixtyScreen from "./Sixty";
                     display: "flex",
                     justifyContent: "flex-end",
                     gap: 5,
-                  }}
-                >
+                  }}>
                   <Text style={{ fontWeight: "bold", color: "#00A000" }}>+8 Pts</Text>
                    
                     
@@ -654,8 +633,7 @@ import SixtyScreen from "./Sixty";
                 display: "flex",
                 justifyContent: "flex-end",
                 gap: 5,
-              }}
-            >
+              }}>
               <Text style={{ fontWeight: "bold", color: "#ff0000" }}>-2 Pts</Text>
                
                 
@@ -685,8 +663,7 @@ import SixtyScreen from "./Sixty";
            
             display: "flex",
             alignItems: "center",
-          }}
-        >
+          }}>
           <View style={{ width: wp("55%" )}}>
             <Text style={{ fontWeight: "bold" }}>Strick Rate (Except Bowler) Points</Text>
             <Text style={{fontSize: hp(1.2)}}>(Min 10 Balls to be Played)</Text>
@@ -698,8 +675,7 @@ import SixtyScreen from "./Sixty";
               display: "flex",
               justifyContent: "flex-end",
               gap: 5,
-            }}
-          >
+            }}>
             
           </View>
         </View>

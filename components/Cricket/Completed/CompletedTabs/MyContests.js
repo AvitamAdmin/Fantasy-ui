@@ -37,7 +37,7 @@ const MyContests = () => {
       
       <View
         style={{
-          width: wp("97%"),
+         width: isTablet ? wp('97%') : wp('93%'),
           flexDirection: "column",
           display: "flex",
           justifyContent: "center",
@@ -46,7 +46,7 @@ const MyContests = () => {
       >
         <View
           style={{
-            width: wp("95%"),
+            width: wp("94%"),
             flexDirection: "row",
             display: "flex",
             justifyContent: "center",
@@ -79,10 +79,10 @@ const MyContests = () => {
                   />
                 </View>
                 <View style={{ flexDirection: "column" }}>
-                  <Text style={{ color: "#fff", fontWeight: "bold" , fontSize:hp(1.4)}}>
+                  <Text style={{ color: "#fff", fontWeight: "bold" , fontSize:hp(1.5)}}>
                     Congratulations !
                   </Text>
-                  <Text style={{ color: "#fff", fontSize:hp(1.4) }}>You’ve won in 1 Contest</Text>
+                  <Text style={{ color: "#fff", fontSize:hp(1.5) }}>You’ve won in 1 Contest</Text>
                 </View>
               </View>
 
@@ -102,7 +102,7 @@ const MyContests = () => {
       
       
   
-      <View style={{width: wp('94%'),flexDirection:"column",display:"flex",justifyContent:"center",alignItems:"center",paddingTop:10}}>
+      <View style={{width: isTablet ? wp('94%') : wp('88%'),flexDirection:"column",display:"flex",justifyContent:"center",alignItems:"center",paddingTop:10}}>
       <View style={{width: wp("95%"),display:"flex",flexDirection:"column",justifyContent:"center",gap:10,borderWidth:1,borderRadius:10,borderColor:"#BCBCBC"}}>
   
   <Pressable onPress={()=> setShow(true)} style={{flexDirection:"column",gap:5,padding:10}}>

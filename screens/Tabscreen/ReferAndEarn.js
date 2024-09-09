@@ -218,8 +218,10 @@ const ReferAndEarn = () => {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
+                  justifyContent:'center',
                   gap: 10,
                   borderRadius: 5,
+                  width: wp('35%')
                 }}
               >
                 <Ionicons name="share-social-outline" size={24} color="black" />
