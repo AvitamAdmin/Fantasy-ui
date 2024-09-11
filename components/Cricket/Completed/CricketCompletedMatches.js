@@ -268,24 +268,21 @@ const CricketLiveMatches = () => {
 
 export default CricketLiveMatches
 
+
 const styles = StyleSheet.create({
   
- content:{
-   
+ content:{  
     height:hp("63%"),
     width: wp("100%"),
     justifyContent:"center",
      alignItems:"center",
      padding:35,
-     gap:15
-     
- },
-  
+     gap:15     
+ }, 
    image:{
     height:350,
     width:290,
-    opacity:0.30
-    
+    opacity:0.3  
    },
    pressable:{
          backgroundColor:"#3385ff",

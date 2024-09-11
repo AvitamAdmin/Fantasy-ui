@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, Pressable } from "react-native";
+import { View, Text, StyleSheet, Image, Pressable, } from "react-native";
 import {
   DrawerContentScrollView,
   DrawerItemList,
@@ -12,9 +12,11 @@ import { Dimensions } from 'react-native';
 import { useWindowDimensions } from 'react-native';
 
 const DrawerHeader = (props) => {
+  
   const { width: screenWidth } = useWindowDimensions();
     const navigation = useNavigation()
     const imageSize = screenWidth >= 768 ? screenWidth * 0.2 : screenWidth * 0.2;
+    const isTablet = screenWidth >= 768; 
   return (
     <DrawerContentScrollView {...props}>
       <View style={{padding: 10,
@@ -73,7 +75,7 @@ const DrawerHeader = (props) => {
         
 {/* wallet balace show container */}
         <Pressable style={{marginTop: 20,        
-    width: wp("82%"),
+   width: isTablet ? wp('72%') : wp('82%'), 
     alignItems: "center",
     backgroundColor: "#fff",
     padding: 10,
@@ -89,7 +91,7 @@ const DrawerHeader = (props) => {
               // backgroundColor:'#000',
               display: "flex",
               flexDirection: "row",
-              width: wp("74%"),
+              width: isTablet ? wp('68%') : wp('74%'), 
               justifyContent: "space-between",
               alignItems: "center",
             }}
@@ -118,7 +120,7 @@ const DrawerHeader = (props) => {
             </View>
           </View>
           
-          <View style={{flexDirection: "row", justifyContent:"space-between", marginTop: 10, width: wp("77%")}}>
+          <View style={{flexDirection: "row", justifyContent:"space-between", marginTop: 10,width: isTablet ? wp('70%') : wp('77%'), }}>
             <Pressable
             onPress={()=>navigation.navigate("ADD CASH")}
               style={{
@@ -129,11 +131,11 @@ const DrawerHeader = (props) => {
                 paddingLeft: 20,
                 padding: 5,
                 borderRadius:4,
-                // width: wp('23%')
+                width: wp('23%'),
+                justifyContent:'center',
+              }}>
 
-              }}
-            >
-              <Text style={{marginRight: 20,color: "#fff",fontWeight: "bold", textAlign:'center'}}>+ ADD CASH</Text>
+              <Text style={{marginRight:20,color: "#fff",fontWeight: "bold", textAlign:'center'}}>+ ADD CASH</Text>
             </Pressable>
             <Pressable
               style={{
@@ -145,11 +147,10 @@ const DrawerHeader = (props) => {
                 paddingLeft: 20,
                 padding: 5,
                 borderRadius:4,
-               
-                // width: wp('22%')
+               justifyContent:'center',
+                width: wp('22%')
               }}
-              onPress={()=>navigation.navigate('WITHDRAW')}
-            >
+              onPress={()=>navigation.navigate('WITHDRAW')}>
               <View>
                 <Image
                   source={require("../assets/Withdraw.png")}
@@ -157,10 +158,7 @@ const DrawerHeader = (props) => {
                 />
               </View>
               
-                <Pressable  style={{ color: "#fff",
-    fontWeight: "bold",}}
-                
-                >
+                <Pressable  style={{ color: "#fff",fontWeight: "bold",}}>
                 <Text style={{color:"#fff",}}>WITHDRAW</Text>
                 </Pressable>
               
