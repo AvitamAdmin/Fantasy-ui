@@ -131,7 +131,7 @@ const DrawerHeader = (props) => {
                 paddingLeft: 20,
                 padding: 5,
                 borderRadius:4,
-                width: wp('23%'),
+                // width: wp('23%'),
                 justifyContent:'center',
               }}>
 
@@ -148,7 +148,7 @@ const DrawerHeader = (props) => {
                 padding: 5,
                 borderRadius:4,
                justifyContent:'center',
-                width: wp('22%')
+                // width: wp('22%')
               }}
               onPress={()=>navigation.navigate('WITHDRAW')}>
               <View>
